@@ -1,0 +1,19 @@
+<html>
+<body>
+	Enter Color Name:<input type="text" id="txt1" name="text"></input>
+	<input type="button" value="ADD" onclick="fun1()">
+
+	<script>
+	function fun1()
+	{
+		var x=document.getElementById('txt1').value;
+
+		alert(x);
+		document.cookie="color="+x+";Expires Mon, 13 Jun 2017 00:00:01;";
+
+
+	}
+	
+</script>
+</body>	
+</html>

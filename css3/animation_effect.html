@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+div
+{
+	height:200px;
+	width:200px;
+	border:2px solid red;
+	background-color: yellow;
+	animation:ex 5s linear infinite;
+	
+}
+@keyframes ex
+{
+	0%{background-color:red;border-radius:20px};
+	20%{background-color:hsla(100,30%,50%,0.2);border-radius:40px};
+	50%{background-color:hsla(180,40%,30%,0.2);border-radius:30px};
+	75%{background-color:hsla(230,50%,60%,0.2);border-radius:40px};
+/*	100%{background-color:hsla(300,80%,50%,0.3);border-radius:30px};
+*/	
+100%{background-image:url("Lighthouse.jpg")};
+	
+
+}
+
+</style>
+</head>
+<body>
+<div> This is my div</div>
+</body>
+</html>

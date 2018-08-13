@@ -1,0 +1,54 @@
+<html>
+<head>
+<script>
+function getCookieValue(cookieName) 
+{
+	var cookieValue=document.cookie;
+	//alert(cookieValue);
+	var cookieStartsAt=cookieValue.indexOf(" "+cookieName+"=");
+	if(cookieStartsAt==-1)
+	{
+		cookieStartsAt=cookieValue.indexOf(cookieName+"=");
+
+	}
+	if(cookieStartsAt==-1)
+	{
+		cookieValue=null;
+		
+	}
+	else{
+		//alert(cookieStartAt);
+		var cookieStartsAt=cookieValue.indexOf("=",cookieStartsAt)+1;
+		var cookieEndsAt=cookieValue.indexOf(";",cookieStartsAt);
+		if(cookieEndsAt==-1)
+		{
+			cookieEndsAt=cookieValue.length;
+		}
+		var str=unescape(cookieValue.substring(cookieStartsAt,cookieEndsAt));
+		//alert(str);
+		//document.bgColor=str;
+
+			}
+			return str;
+}
+</script>
+</head>
+<body>
+<div id="d1">
+</div>
+<script>
+var count=0;
+var count=getCookieValue('VCount');
+if(count==null)
+{
+	count=1;
+}
+else
+{
+	count=Number(count)+1;
+}
+document.getElementById("d1").innerHTML="Visitors Count="+count;
+document.cookie="VCount="+count+";expires=tue,20 dec 2020 0.0.0";
+</script>
+</body>
+</html>

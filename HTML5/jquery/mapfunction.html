@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		var numArray=[4,9,16,25];
+		document.getElementById('d2').innerHTML=(numArray);
+		var newArray=$.map(numArray,function(value,index)
+		{
+			return Math.sqrt(value);
+		});
+		document.getElementById('d1').innerHTML=(newArray);
+	})
+});
+</script>
+</head>
+<body>
+<input type="button" id="btn1" value="click">
+<div id="d2"></div>
+<div id="d1"></div>
+</body>
+</html>

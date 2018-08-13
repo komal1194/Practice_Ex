@@ -1,0 +1,33 @@
+<html>
+<head>
+<style type="text/css">
+#d1,#d2
+{
+	padding: 5px;
+	text-align: center;
+	background-color: pink;
+	border: solid 2px black;
+}
+#d2{
+	padding: 50px;
+}
+
+</style>	
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+$("#d2").click(function(){	
+//$("#d2").slideUp("slow");
+$("#d1").slideDown("slow");
+
+});
+});
+</script>
+</head>
+<div id="d1"></div>
+<div id="d2"></div>
+
+<body>
+
+</body>
+</html>

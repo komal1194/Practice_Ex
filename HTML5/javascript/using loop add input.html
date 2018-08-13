@@ -1,0 +1,47 @@
+<html>
+<body>
+Enter name:<input type="text" id="text1">
+quantity:<input type="text" id="text2">
+<input type="button" value="add" onclick="add()">
+<input type="button" value="update" onclick="update()">
+<div id="div1"></div>
+<script>
+var list=new Array();
+function add()
+{
+var txtName=document.getElementById("text1").value;
+var txtQty=document.getElementById("text2").value;
+var obj=new ShopList(txtName,txtQty);
+list.push(obj);
+show();
+//alert(x);
+//alert(y);
+var x;
+
+function update()
+{
+	var
+}
+
+function ShopList(x,y)
+{
+	this.name=x;
+	this.qty=y;
+
+}
+
+function show()
+{
+	var str=" ";
+	for(i=0;i<list.length;i++)
+	{
+		str+="<li>"+list[i].name+"-"+list[i].qty+"</li>"
+	}
+	div1.innerHTML="<ul>"+str+"<ul>"
+}
+
+
+
+</script>
+</body>
+</html>

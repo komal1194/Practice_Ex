@@ -1,0 +1,33 @@
+<html>
+<head>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+			
+  $("#btn1").on({
+  	"click":fun,"mouseover":fun, "mouseout":fun
+		});
+		function fun(event)
+		{
+			if(event.type=="click")
+			{
+				alert("Clicked");
+			}
+			else if(event.type="mouseover")
+			{
+
+				$("#btn1").css("background-color","red");
+			}
+			else if(event.type="mouseout")
+			{
+				//alert("hello");
+				$("#btn1").css("background-color","yellow");
+			}
+		}
+	})
+</script>
+</head>
+<body>
+<input type="button" id="btn1" value="click"></input>
+</body>
+</html>

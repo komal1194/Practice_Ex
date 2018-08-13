@@ -1,0 +1,18 @@
+<html>
+<body>
+<div id="d1">
+This is div
+</div>
+<script src="utility.js"></script>
+<script>
+var a=document.getElementById("d1");
+EventUtil.addHandler(a,"click",fun);
+function fun(event)
+{
+event.target.style.fontSize="100px";
+}
+</script>
+
+</body>
+</html>
+

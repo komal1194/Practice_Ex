@@ -1,0 +1,46 @@
+<html>
+<body>
+<form method="get" action="fetch-year-test.php">
+Enter Year:<input type="text" name="year" id="txt1"><br><br>
+First Class:<input type="radio" name="passyear" value="first"><br>
+Second Class:<input type="radio" name="passyear" value="second"><br>
+Fail:<input type="radio" name="passyear" value="fail"><br><br>
+<input type="submit" name="btnclick" value="display" onclick=fun()>
+</form>
+<script>
+function fun()
+{
+	var year=document.getElementById('year');
+	var passyear=document.getElementById('passyear');
+	var rs=document.getElementById('first');
+	var rs=document.getElementById('second');
+	var rs=document.getElementById('fail');
+	
+	
+	var xmlHttp= new XMLHttpRequest();
+	xmlHttp.onreadystatechange=function()
+{
+	if(xmlHttp.readyState==4 && xmlHttp.status==200)
+	{
+		myfunction(xmlHttp.responseText);
+	}
+	
+}
+xmlHttp.open("GET","fetch-year-test.php?year="+txt1,true);
+xmlHttp.send();
+}
+function myfunction(str)
+{
+	var arr=JSON.parse(str);
+	var str1="<table border=1>";
+	for(var i=0;i<arr.length;i++)
+	{
+		str1+="<tr><td>"+arr[i].name+"</td><td>"+arr[i].marks+"</td><td>"+arr[i].year+"</td></tr>";
+	}
+	str1+="</table>";
+
+}
+
+</script>
+</body>
+</html>

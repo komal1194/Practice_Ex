@@ -1,0 +1,67 @@
+<html>
+<head>
+<style>
+#canvas1{
+	width: 500px;
+	height: 500px;
+	border: 1px solid black;
+}
+</style>
+<body>
+	<canvas id="canvas1"></canvas>
+	
+</body>
+<script>
+var canvas1=document.getElementById('canvas1');
+var ctx=canvas1.getContext("2d");
+
+
+	
+	//ctx.translate(210,160);
+	//ctx.scale(2,1);
+	//ctx.rotate(0.5);
+	ctx.save();
+	triangle(ctx);
+	first_sign(ctx);
+
+	
+	ctx.save();
+	ctx.translate(160,10);
+	triangle(ctx);
+	ctx.restore();
+
+
+
+
+function triangle(ctx)
+{
+	ctx.strokeStyle="red";
+	ctx.lineWidth="8";
+	ctx.moveTo(60,20);
+	ctx.lineTo(20,70);
+	ctx.lineTo(100,70);
+	ctx.closePath();
+	ctx.stroke();
+	
+}
+
+function first_sign(ctx)
+{
+	ctx.fillRect(56,35,7,30);
+	ctx.fillRect(40,52,41,3);
+	
+}	
+function second_sign(ctx)
+{
+	ctx.beginPath();
+	ctx.arc(50,60,5,0,2*3.14);
+	ctx.stroke();
+	//ctx.fill();
+	ctx.moveTo(50,120);
+	ctx.lineTo(40,110);
+	ctx.closePath();
+	ctx.stroke();
+}
+
+</script>
+</html>

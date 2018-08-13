@@ -1,0 +1,55 @@
+
+<html>
+<head>
+	<script src="jquery-1.11.3.js"></script>
+	<script>
+
+	$(document).ready(function()
+	{
+		$("#btn1").click(function()
+		{
+			if($("#select1").val()=="+")
+			{
+				var sum=0;
+				var num1=$("#txtNum1").val();
+				var num2=$("#txtNum2").val();
+				var sum=Number(num1)+Number(num2);
+			
+				$("#txtSum").val(sum);
+			}
+			if($("#select1").val()=="-")
+			{
+				var sum=0;
+				var num1=$("#txtNum1").val();
+				var num2=$("#txtNum2").val();
+				var diff=Number(num1)-Number(num2);
+			
+			$("#txtSum").val(diff);
+			}
+			if($("#select1").val()=="*")
+			{
+				var sum=0;
+				var num1=$("#txtNum1").val();
+				var num2=$("#txtNum2").val();
+				var mul=Number(num1)*Number(num2);
+			
+				$("#txtSum").val(mul);
+			}
+		})
+	})
+
+	</script>
+</head>
+<body>
+Enter num1 :<input type="text" id="txtNum1"></input><br><br>
+Enter num2 :<input type="text" id="txtNum2"></input><br><br>
+<select id="select1">
+	<option>+</option>
+	<option>-</option>
+	<option>*</option>
+</select><br><br>
+
+<input type="button" id="btn1" value="Click"></input>
+Answer :<input type="text" id="txtSum"></input>
+</body>
+</html>

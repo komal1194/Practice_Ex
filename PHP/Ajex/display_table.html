@@ -1,0 +1,51 @@
+<html>
+<body>
+<div id="d1"></div><br>
+	<input type="button" value="display" onclick=displayTable()>
+	<input type="button" value="add" onclick=sendData()>
+
+<script>
+	function displayTable()
+	{
+		var xmlhttp=new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function()
+				{
+					if(xmlhttp.readyState==4 && xmlhttp.status==200)
+					{
+						myFun(xmlhttp.responseText);
+					}
+				}
+		xmlhttp.open("GET","display_table.php",true);
+		xmlhttp.send();
+	}
+	function myFun(str)
+	{
+		var arr=JSON.parse(str);
+		var tab="<table border=2>";
+		tab+="<tr><td>BookId</td><td>Name</td><td>Price</td><td>Check</td></tr>";
+		for(var i=0;i<arr.length;i++)
+		{
+			tab+="<tr><td>"+arr[i].bookId+"</td><td>"+arr[i].bookName+"</td><td>"+arr[i].price+"</td><td><input type='checkbox' value="+arr[i].bookId+"></input></td></tr>";
+		}
+		tab+="</table>";
+		document.getElementById('d1').innerHTML=tab;
+	}
+	function sendData()
+	{
+		var select=document.querySelectorAll("input[type='checkbox']:checked");
+		for(var i=0;i<select.length;i++)
+		{
+			var tr=select[i].parentNode.parentNode.children;
+			var bookId=tr[0].innerHTML;
+			var bookName=tr[1].innerHTML;
+			var price=tr[2].innerHTML;
+			var xmlhttp=new XMLHttpRequest();
+			
+			xmlhttp.open("GET","addtocart.php?bookId="+bookId+"&bookName="+bookName+"&price="+price,true);
+			xmlhttp.send();
+		}
+		alert("Record inserted");
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+﻿/*----------------------------Tab Panel Style-----------------------------*/
+.ajax__myTab
+{
+	
+	margin-top: 20px;
+	box-shadow: 0px 5px 3px 1px #BBB;
+	background: #F8F8F8; /*border:#CCCCCC thin dotted;	*/ /*  background-image:url(../images/backgroundimg1.jpg);*/
+}
+
+.ajax__myTab .ajax__tab_header
+{
+	font: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-size: 11px;
+	border: solid 1px #ccc; /*border-bottom: CCCCCC thin dotted;*/
+}
+
+.ajax__myTab .ajax__tab_outer
+{
+	padding-right: 4px;
+	padding-bottom: 5px;
+	height: 21px; /*background-color:#F2F2F2;*/
+	margin-right: 2px;
+	vertical-align: text-top; /*border-right: solid 1px #999; 	border-top: solid 1px #999; */ /*border:solid 1px #999;*/
+}
+
+.ajax__myTab .ajax__tab_inner
+{
+	padding-left: 3px; /*background-color:#F2F2F2;*/
+	font-weight: bold;
+}
+
+.ajax__myTab .ajax__tab_tab
+{
+	/*height: 13px;*/ /*padding: 4px;*/
+	margin: 0;
+	outline: none;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+.ajax__myTab .ajax__tab_hover .ajax__tab_outer
+{
+	/*background-color: #cccccc*/
+}
+
+.ajax__myTab .ajax__tab_hover .ajax__tab_inner
+{
+	/*background-color: #cccccc;*/ /*background-image:url(../images/backgroundimg1.jpg);*/
+}
+
+.ajax__myTab .ajax__tab_hover .ajax__tab_tab
+{
+}
+
+.ajax__myTab .ajax__tab_active .ajax__tab_outer
+{
+	/*background-color: #fff;*/ /*border-left: solid 1px #999999;*/ /*background-image:url('Tab/menu-bg.png');*/ /*  background-image:url(../images/backgroundimg1.jpg);*/
+	border: none; /*background-color: #ccc;*/
+	background-color: rgba(255,0,0,0.6);
+	background-color: #bbb;
+	color: #fff;
+	height: auto;
+	outline: none;
+	vertical-align: text-top;
+}
+
+.ajax__myTab .ajax__tab_active .ajax__tab_inner
+{
+	/*background-color:#fff;*/ /*  background-image:url(../images/backgroundimg1.jpg);*/ /*background-image:url('Tab/menu-bg.png');*/
+	color: #fff;
+	border: none;
+}
+
+.ajax__myTab .ajax__tab_active .ajax__tab_tab
+{
+	height: auto;
+	border: none;
+	color: #fff;
+	margin-left: 10px;
+	margin-right: 10px; /*margin-top: 5px;*/
+}
+
+.ajax__tab_hover .ajax__tab_inner
+{
+	color: #fff;
+}
+
+.ajax__myTab .ajax__tab_body
+{
+	/*font: Arial, Helvetica, sans-serif;*/
+	font-size: 14px;
+	font-size: 10pt;
+	border: 1px solid #ccc;
+	border-top: 0;
+	padding: 8px; /*background-color: #ffffff;*/ /*  background-image:url(../images/backgroundimg1.jpg);*/ /*border:#DDDDDD 1px solid;*/
+}
+
+.ajax__tab_panel *
+{
+	color: #000000;
+}
+
+.ajax__tab_panel td
+{
+	border: solid 1px #CCCCCC;
+	color: #000000;
+	padding-left: 5px;
+}
+
+.ajax__tab_panel th
+{
+	border: solid 1px #CCCCCC;
+	color: #000000;
+}
+
+.ajax__tab_panel tr
+{
+	border: solid 1px #CCCCCC;
+}
+/*--------------------------------------------------------------*/
+
+
+/*-------------Calender Control Style Starts--------------*/
+.cal_Theme1 .ajax__calendar_container
+{
+	background-color: #e2e2e2;
+	border: solid 1px #D10816;
+	background-color: White;
+	width: 200px;
+}
+
+.cal_Theme1 .ajax__calendar_header
+{
+	background-color: #ffffff;
+	margin-bottom: 4px;
+}
+
+.cal_Theme1 .ajax__calendar_title, .cal_Theme1 .ajax__calendar_next, .cal_Theme1 .ajax__calendar_prev
+{
+	color: #004080;
+	padding-top: 3px;
+}
+
+.cal_Theme1 .ajax__calendar_body
+{
+	background-color: #e9e9e9;
+	border: solid 1px #cccccc;
+	width: 200px;
+	height: 145px;
+}
+
+.cal_Theme1 .ajax__calendar_dayname
+{
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 4px;
+	margin-top: 2px;
+}
+
+.cal_Theme1 .ajax__calendar_day
+{
+	text-align: center;
+	padding: 0px;
+}
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_month, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_year, .cal_Theme1 .ajax__calendar_active
+{
+	color: #004080;
+	font-weight: bold;
+	background-color: #ffffff;
+}
+
+.cal_Theme1 .ajax__calendar_today
+{
+	font-weight: bold;
+}
+
+.cal_Theme1 .ajax__calendar_other, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_today, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_title
+{
+	color: #bbbbbb;
+	padding: 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.cal_Theme1 td
+{
+	padding: 0px 3px 0px 3px;
+}
+
+/************************************************************/
+
+.ajax__validatorcallout_popup_table_row td
+{
+	padding:0px;
+	
+}
+.ajax__validatorcallout_error_message_cell
+{
+	color:Black;
+	vertical-align:middle;
+}
+
+.Watermark_Style
+{
+	color:#999999;
+}
+
+.TextBox_Autocompletion_Hilighed_Element
+{
+	background-color:#DDDDDD;
+	color:#C30;
+	margin-left: 0px;
+	list-style:none;
+    z-index : 90001 !important;
+	/*text-align:left;*/
+}
+
+.TextBox_Autocompletion_Element
+{
+	margin-left: 0px;
+	list-style:none;
+	background: #F0F0F0;
+	/*text-align:left;*/
+		/* z-index:2000 !important;*/
+		 z-index : 90001 !important;
+	padding:0px 0px 0px 0px ;
+}
+.TextBox_Autocompletion_List
+{
+	/*z-index:9999999999;*/
+    /* z-index: 100009;*/
+    position:absolute; 
+}
+
+
+/* Loading Images Style Starts */
+
+.Loading_Image_Style
+{
+	/*background-color:#FFFFFF;*/
+	color: #D10816; /*border:solid 1px #666666;*/
+	font-weight: bold;
+}
+
+#ctl00_ContentPlaceHolder1_UpdateProgress1
+{
+	top:50%;
+	left:50%;
+}
+
+
+
+/* Loading Images Style Ends */

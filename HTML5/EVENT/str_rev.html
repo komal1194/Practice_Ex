@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1>String reverse</h1>
+<input type="text" id="txt1">
+<input type="button" value="click" onclick="rev()">
+<div id="d1"></div>
+<script>
+function rev()
+{
+	var arr=[];
+	var str=document.getElementById("txt1").value
+	alert(str);
+	var str1=document.getElementById("d1");
+	name=str.split("").reverse().join("");
+	str1.innerHTML+="<br>"+name;
+
+}
+</script>
+</body>
+</html>

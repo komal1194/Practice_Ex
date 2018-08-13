@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+canvas
+{
+	height: 300px;
+	width: 300px;
+	border: 1px black solid;
+}
+</style>
+</head>
+<body>
+	
+	<canvas id="c1"></canvas>
+	<script type="text/javascript">
+	var c1=document.getElementById('c1');
+	var ctx=c1.getContext("2d");
+	//first tree
+	ctx.save();
+	ctx.translate(100,150);
+	drawTree(ctx);
+	ctx.restore();
+	function canopy(ctx)
+	{
+		ctx.beginPath();
+		ctx.moveTo(-25,-50);
+		ctx.lineTo(-10,-80);
+		ctx.lineTo(-20,-80);
+		ctx.lineTo(-5,-110);
+		ctx.lineTo(-15,-110);
+		ctx.lineTo(-0,-140);
+
+		ctx.lineTo(15,-110);
+		ctx.lineTo(5,-110);
+		ctx.lineTo(20,-80);
+		ctx.lineTo(10,-80);
+		ctx.lineTo(25,-50);
+		ctx.closePath();
+}
+ function drawTree(ctx)
+ {
+ 	ctx.fillStyle="brown";
+ 	ctx.fillRect(-5,-50,10,20);
+ 	ctx.fillStyle="green";
+ 	ctx.strokeStyle="yellow";
+ 	ctx.lineWidth="2";
+ 	ctx.lineJoin="round";
+ 	canopy(ctx);
+ 	ctx.fill();
+ 	ctx.stroke();
+
+ 	//shadow
+
+ 	ctx.transform(2,1,0.5,1,1,0);
+ 	ctx.fillStyle="rgba(0,0,0,0.3)";
+ 	 	ctx.fillRect(-5,-50,10,30);
+ 	 	canopy(ctx);
+ 	 	ctx.fill();
+
+ }
+ </script>
+ </body>
+</html>

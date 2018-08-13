@@ -1,0 +1,42 @@
+<html>
+<head>
+	<style type="text/css">
+#d1{
+	height:200px;
+	width: 200px;
+	border: black 1px solid;
+	background-color: skyblue;
+	position: relative;
+	font-size: 20px;
+	box-shadow: 2px 4px 3px green;
+}
+
+	</style>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		var div=$("div");
+		div.animate({
+			height:'300px',
+			width:'500px',
+			opacity:'0.5',
+			fontSize:'40px'
+		},300);
+	div.animate({
+			height:'100px',
+			width:'200px',
+			opacity:'0.2',
+			fontSize:'20px'
+		},400);
+$("div").hide(300).delay(300).show(1000);
+	
+	})
+})
+</script>
+</head>
+<body>
+<div id="d1"> Hello</div>
+<button id="btn1">Animate</button><br><br>
+</body>
+</html>

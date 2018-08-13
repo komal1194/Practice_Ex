@@ -1,0 +1,65 @@
+<html>
+<head>
+<style>
+div,#d1,#d2{
+	height:200px;
+	width:200px;
+	border:1px red solid;
+	float: left;
+}
+</style>
+</head>
+<body>
+<div ondragover=dragoverHandler(event) ondrop=dropHandler(event)>
+	
+	<ul>
+		<li id="l1" ondragstart=startHandler(event) draggable="True">A</li>
+		<li id="l2" ondragstart=startHandler(event) draggable="True">B</li>
+		<li id="l3" ondragstart=startHandler(event) draggable="True">C</li>
+	</ul>
+	<ul id="d3">
+		<li id="l4" ondragstart=startHandler(event) draggable="True">80</li>
+		<li id="l5" ondragstart=startHandler(event) draggable="True">40</li>
+		<li id="l6" ondragstart=startHandler(event) draggable="True">80</li>
+
+		</ul>
+</div>
+
+<div id="d1" ondragover=dragoverHandler(event) ondrop=dropHandler(event)>
+	</div>
+	<div id="d2" ondragover=drag(event) ondrop=drop(event)>
+	</div>
+
+	<script>
+	function startHandler(event)
+	{
+		event.dataTransfer.setData("text/plain",event.target.id);
+
+	}
+	function dragoverHandler(event)
+	{
+		event.preventDefault();
+
+	}
+	function dropHandler(event)
+	{
+		event.preventDefault();
+		var data=event.dataTransfer.getData("text/plain");
+		event.target.appendChild(document.getElementById(data));
+
+	}
+	function drag(event)
+	{
+		event.preventDefault();
+	}
+
+	function drop(event)
+	{
+		event.preventDefault();
+		var d3=document.getElementById("d3");
+		var data1=event.dataTransfer.getData("text/plain");
+		event.target.appendChild(document.getElementById(data1));
+	}
+</script>
+</body>
+</html>

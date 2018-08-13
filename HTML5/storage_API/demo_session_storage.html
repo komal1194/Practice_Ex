@@ -1,0 +1,27 @@
+<html>
+<script type="text/javascript">
+function clickCounter()
+{
+if (typeof(Storage)!=="Undefined")
+{
+	if(sessionStorage.clickCount)
+	{
+		sessionStorage.clickCount=Number(sessionStorage.clickCount)+1;
+	}
+	else
+	{
+		sessionStorage.clickCount=1;
+	}
+	document.getElementById('result').innerHTML="You have clicked"+sessionStorage.clickCount+" times";
+}
+else
+document.getElementById('result').innerHTML="Youe browser does not support";
+
+}
+</script>
+<body>
+	<p>Click the button to count the number of hits</p>
+	<button onclick="clickCounter()">Click</button>
+	<div id="result"></div>
+</body>
+</html>

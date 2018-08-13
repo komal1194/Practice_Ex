@@ -1,0 +1,41 @@
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="jquery-1.11.3.js"></script>
+<script src="bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#showBtn").mouseover(function(){
+		$("#insertModal").modal();
+	})
+})
+</script>
+</head>
+<body>
+<ul id="showBtn"><li>red</li><li>red</li><li>red</li>
+</ul>	
+<br><Br>
+<input type="button" id="showBtn" value="ShowPopUp">
+<div id="insertModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a href="#">
+<span class="glyphicon glyphyicon-ok" id="btn1">Insert</span>	
+</a>
+<a  id="btn1" href="#" data-dismiss="modal">
+<span class="glyphicon glyphicon-ok"></span>OK</a>
+<button type="button" class="close" data-dismiss="modal">&times;
+</button>
+<h4 class="modal-title">Insert Data</h4>
+</div>
+<div class="modal-body">
+Department Id:<input type="text" id="txtId"><br><br>
+Department Name:<input type="text" id="txtName"><br><br>
+</div>
+<div class="modal-footer">
+<input type="button" class="close" data-dismiss="modal" value="Close"></input>
+</div>
+</div></div></div>
+</body>
+</html>

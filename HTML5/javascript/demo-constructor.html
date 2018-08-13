@@ -1,0 +1,20 @@
+<html>
+<p id="demo"></p>
+<input type="button" value="click" onclick="fun()">
+<body>
+	<script>
+function fun()
+{
+	var person={fname:"Komal",lname:"Bora",age:"23"};
+	var text="";
+	var x;
+	for(x in person)
+	{
+		text+=person[x]+"";
+
+	}
+	document.getElementById("demo").innerHTML=text;
+}
+	</script>
+	</body>
+</html>

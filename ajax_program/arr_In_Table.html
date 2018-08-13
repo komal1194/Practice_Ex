@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>welcome</title>
+	<script src="jquery-1.11.3.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			var arr=[
+						{
+							name:"a",
+							qty:1
+						},
+						{
+							name:"b",
+							qty:2
+						},
+						{
+							name:"c",
+							qty:3
+						}
+					];
+			$.each(arr,function(key,value)
+			{
+				if(value.name=="b")
+				{
+					value.qty=100;
+				}
+			})
+			var str="<table border=2>";
+			str+="<tr><td>Name</td><td>value</td></tr>";
+			$.each(arr,function(key,value)
+			{
+				str+="<tr><td>"+value.name+"</td><td>"+value.qty+"</td></tr>";
+			})
+			str+="</table>";
+			$("#d1").html(str);
+		})
+</script>
+</head>
+<body>
+<div id="d1"></div>
+</body>
+</html>

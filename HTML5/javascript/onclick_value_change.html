@@ -1,0 +1,40 @@
+<html>
+<head>
+<body>
+<div id="d1"></div>
+<script>
+
+var arr=["red","green","blue"];
+var str=" ";
+
+for(i=0; i<arr.length;i++)
+{
+str+="<tr><td>" +arr[i]+"</td></tr>"
+}
+d1=document.getElementById("d1");
+d1.innerHTML+="<table border=2>"+str+"<table>";
+</script>
+<script src="utility.js"></script>
+		<script>
+
+				EventUtil.addHandler(d1,"click",fun1);
+				function fun1(event)
+				{
+					
+					var x=event.target.innerHTML;
+					var str=prompt("Add a  color value:");
+					if(str==null)
+					{
+				
+						event.target.innerHTML=x;
+					}
+					else
+					{
+						event.target.innerHTML=str;
+					}
+				}
+			
+		</script>
+</head></table>
+</body>
+</html>

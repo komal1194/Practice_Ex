@@ -1,0 +1,75 @@
+<html>
+<body>
+	<img id="img1" width=300px height=300px></img><br>
+	<input type="button" id="btn1" value="First" ></input>
+	<input type="button" id="btn2" value="Previous" ></input>
+	<input type="button" id="btn3" value="Next" ></input>
+	<input type="button" id="btn4" value="Last" ></input>
+	<div id="d1"></div>
+	<script src="utility.js"></script>
+	<script>
+	arr=new Array("Lighthouse.jpg","Tulips.jpg","Lighthouse.jpg","Koala.jpg");
+	img1=document.getElementById("img1");
+	d1=document.getElementById("d1");
+	btn1=document.getElementById("btn1");
+	btn2=document.getElementById("btn2");
+	btn3=document.getElementById("btn3");
+	btn4=document.getElementById("btn4");
+
+	EventUtil.addHandler(btn1,"click",fun1);
+	EventUtil.addHandler(btn2,"click",fun2);
+	EventUtil.addHandler(btn3,"click",fun3);
+	EventUtil.addHandler(btn4,"click",fun4);
+
+	var i=0;
+
+	function fun1()
+	{ 	
+		i=0;
+		img1.src=arr[0];
+		
+	}
+	function fun2()
+	{
+		i--;
+		if(i==0)
+		{
+			//d1.innerHTML="This is first image";
+		}
+		
+		img1.src=arr[i];
+		
+
+
+	}
+	function fun3()
+	{
+		i++;
+		if(i==arr.length-1)
+		{
+			//d1.innerHTML="This is last image";
+		}
+		img1.src=arr[i];
+		
+	}function fun4()
+	{	
+		
+		i=arr.length-1;
+		img1.src=arr[arr.length-1];
+		
+	}
+	
+	function fun4()
+	{	
+		
+		i=arr.length-1;
+		img1.src=arr[arr.length-1];
+		
+	}
+	
+	
+
+
+	</script>
+</body>
+</html>

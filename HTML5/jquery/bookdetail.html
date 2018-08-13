@@ -1,0 +1,35 @@
+<html>
+<head>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$.get("bookdetail_ajex.php",function(data,status)
+{
+	var arr=jQuery.parseJSON(data);
+	var str=" ";
+	var str1="<table border=2><tr><td>bookId</td><td>bookName</td><td>price</td></tr>";
+	$.each(arr,function(k,v){
+		str+="<tr><td>"+v.bookId+"</td><td>"+v.bookName+"</td><td>"
+		+v.price+"</td></tr>";
+
+		})
+	$("div").html(str1+str);
+	
+})
+/*$.getJSON("bookdetail_ajex.php",function(data,status){
+	alert(status);
+	alert(data);
+})*/
+})
+})
+</script>
+	</head>
+	<body>
+		<form>
+<div id="d"></div>
+		</form> 
+		<input type="button" value="click" id="btn1">
+
+	</body>
+</html>

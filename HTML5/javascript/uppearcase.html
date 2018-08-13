@@ -1,0 +1,26 @@
+<html>
+<body>
+<h1>String convert</h1>
+<input type="text" id="txt1">
+<input type="button" value="click" onclick="convert()">
+<div id="d1"></div>
+<script>
+function convert()
+{
+	var str=document.getElementById("txt1").value
+	alert(str);
+	var array1= str.split('');
+	var newarray1=[];
+	for(var x=0;x<array1.length;x++
+	{
+		newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+	}
+	return newarray1.join('');
+}
+var array1=document.getElementById("d1");
+
+	array1.innerHTML+="<br>"+name;
+
+</script>
+</body>
+</html>

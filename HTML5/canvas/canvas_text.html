@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+canvas
+{
+	height: 300px;
+	width: 300px;
+	border: 1px black solid;
+}
+</style>
+</head>
+<body>
+	
+	<canvas id="c1"></canvas>
+	<script type="text/javascript">
+	var c1=document.getElementById('c1');
+	var ctx=c1.getContext("2d");
+	ctx.font="30px times";
+	ctx.fillText("Hello Bitcode",50,50);
+	ctx.strokeText("Hello Bitcode",90,100);
+
+	</script>
+</body>
+</html>

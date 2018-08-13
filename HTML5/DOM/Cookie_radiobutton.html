@@ -1,0 +1,20 @@
+<html>
+<body>
+<input type="radio" value="red">Red</input>
+<input type="radio" value="green">Green</input>
+<input type="radio" value="yellow">Yellow</input>
+<input type="radio" value="blue">Blue</input>
+<input type="button" value="click" onclick="fun()">
+<script>
+function fun()
+{
+	var x=document.getElementById('x');
+ var x=document.querySelectorAll("input[type=radio]:checked");
+ alert(x);
+		document.cookie="color="+x+";Expires Mon, 13 Jun 2017 00:00:01;";
+ 
+}
+</script>
+
+</body>
+</html>

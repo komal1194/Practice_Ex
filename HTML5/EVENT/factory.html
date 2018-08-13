@@ -1,0 +1,29 @@
+<html>
+<body>
+	<script>
+	var personFactory=function(name,age,state)
+	{
+		var person={};
+		person.name=name;
+		person.age=age;
+		person.state=state;
+
+		person.sayName=function()
+		{
+			alert(name+""+age+""+state);
+
+		};
+		return person;
+		
+	}
+	var person1=personFactory("Komal","23","Maharashtra");
+	var person2=personFactory("Pooja","25","Maharashtra");
+
+	person1.sayName();
+	person2.sayName();
+	alert(person1.sayName==person2.sayName);//false
+	
+	</script>
+
+</body>
+</html>

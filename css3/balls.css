@@ -1,0 +1,154 @@
+.main{ margin-top:100px;}
+
+
+.ball1{
+ float:left;
+ width:100px;
+ height:100px;
+ background-color:#999999;
+ border-radius:100%;
+ transition:all 0.5s ease-in-out;
+ -webkite-transition:all 0.5s ease-in-out;
+ -moz-transition:all 0.5s ease-in-out;
+ animation:ball1 3s infinite;
+ -webkit-animation:ball1 3s infinite;
+ -moz-animation:ball1 3s infinite;
+ border:5px solid #222;
+}
+@keyframes ball1{
+20%{
+ background-color:#FF66CC;
+ transition:all 0.5s ease-in-out;
+}
+40%{
+ background-color:#66CC33;
+ margin-left:800px;
+ margin-top:100px;
+ width:150px;
+ height:150px;
+ transition:all 0.5s ease-in-out;
+}
+60%{
+ background-color:#CC33FF;
+ margin-left:500px;
+ margin-top:300px;
+ width:150px;
+ height:150px;
+ transition:all 0.5s ease-in-out;
+}
+80%{
+ background-color:#FFFF00;
+ margin-left:300px;
+ margin-top:100px;
+ width:100px;
+ height:100px;
+ transition:all 0.5s ease-in-out;
+}
+95%{
+ width:200px;
+ height:200px;
+ background-color:#FF9933;
+ transition:all 0.5s ease-in-out;
+}
+}
+ 
+
+
+ /* This CSS for Ball 2 */
+.ball2{
+ float:left;
+ width:100px;
+ height:100px;
+ margin-top:100px;
+ background-color:#66CCCC;
+ border-radius:100%;
+ transition:all 10s ease-in-out;
+ -webkite-transition:all 10s ease-in-out;
+ -moz-transition:all 10s ease-in-out;
+ animation:ball2 2s infinite;
+ -webkit-animation:ball2 2s infinite;
+ -moz-animation:ball2 2s infinite;
+ border:5px solid #222;
+}
+@keyframes ball2{
+20%{
+ background-color:#FFFF66;
+ margin-top:200px;
+ transition:all 0.5s ease-in-out;
+}
+40%{
+ background-color:#CC66FF;
+ margin-top:-50px;
+ width:150px;
+ height:150px;
+ transition:all 0.5s ease-in-out;
+}
+60%{
+ background-color:#FF3366;
+ margin-top:200px;
+ transition:all 0.5s ease-in-out;
+}
+80%{
+ background-color:#FF9966;
+ margin-top:-100px;
+ width:100px;
+ height:100px;
+ transition:all 0.5s ease-in-out;
+}
+95%{
+ width:150px;
+ height:150px;
+ margin-top:250px;
+ background-color:#000000;
+ transition:all 0.5s ease-in-out;
+}
+}
+ 
+ /* This CSS for Ball 3 */
+.ball3{
+ float:left;
+ width:100px;
+ height:100px;
+ margin-top:100px;
+ background-color:#6666CC;
+ border-radius:100%;
+ transition:all 10s ease-in-out;
+ -webkite-transition:all 10s ease-in-out;
+ -moz-transition:all 10s ease-in-out;
+ animation:ball2 2s infinite;
+ -webkit-animation:ball3 2s infinite;
+ -moz-animation:ball3 2s infinite;
+ border:5px solid #222;
+}
+@keyframes ball3{
+25%{
+ background-color:#FF6633;
+ margin-top:50px;
+ transition:all 0.5s ease-in-out;
+}
+40%{
+ background-color:#0066FF;
+ margin-top:300px;
+ width:150px;
+ height:150px;
+ transition:all 0.5s ease-in-out;
+}
+60%{
+ background-color:#333333;
+ margin-top:-200px;
+ transition:all 0.5s ease-in-out;
+}
+80%{
+ background-color:#663333;
+ margin-top:100px;
+ width:100px;
+ height:100px;
+ transition:all 0.5s ease-in-out;
+}
+95%{
+ width:200px;
+ height:200px;
+ margin-top:300px;
+ transition:all 0.5s ease-in-out;
+}
+}

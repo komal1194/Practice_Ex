@@ -1,0 +1,90 @@
+<html>
+<body>
+<h1><center><i>DOM Example of Table Append.</center><i></h1>
+<center><table id="tbl" border=3  table bgcolor="pink"></center>
+</table><br><br>
+<input type="button" value="click" onclick="fun()">
+</body>
+<script>
+function fun()
+{
+	var tbl1=document.getElementById('tbl');
+	var tr=document.createElement("tr");
+    var td=document.createElement("td");
+
+var td1=document.createElement("td");
+var td2=document.createElement("td");
+var td3=document.createElement("td");
+
+
+var td4=document.createElement("td");
+var td5=document.createElement("td");
+var td6=document.createElement("td");
+
+var td7=document.createElement("td");
+var td8=document.createElement("td");
+var td9=document.createElement("td");
+
+var txt1=document.createTextNode("Emp Name.");
+var txt2=document.createTextNode("Emp Id.");
+var txt3=document.createTextNode("Department");
+
+var txt4=document.createTextNode("A");
+var txt5=document.createTextNode("201");
+var txt6=document.createTextNode("Information technology");
+
+var txt7=document.createTextNode("B");
+var txt8=document.createTextNode("202");
+var txt9=document.createTextNode("Management");
+
+
+tr.appendChild(td1);
+tr.appendChild(td2);
+tr.appendChild(td3);
+
+td.appendChild(td1);
+td.appendChild(td2);
+td.appendChild(td3);
+
+
+td.appendChild(td4);
+td.appendChild(td5);
+td.appendChild(td6);
+
+td.appendChild(td7);
+td.appendChild(td8);
+td.appendChild(td9);
+
+
+
+td1.appendChild(txt1);
+td2.appendChild(txt2);
+td3.appendChild(txt3);
+
+td4.appendChild(txt4);
+td5.appendChild(txt5);
+td6.appendChild(txt6);
+
+td7.appendChild(txt7);
+td8.appendChild(txt8);
+td9.appendChild(txt9);
+
+
+tbl1.appendChild(tr);
+tbl1.appendChild(td1);
+tbl1.appendChild(td2);
+tbl1.appendChild(td3);
+
+tbl1.appendChild(tr);
+tbl1.appendChild(td4);
+tbl1.appendChild(td5);
+tbl1.appendChild(td6);
+
+
+//tbl1.appendChild(tr);
+//tbl1.appendChild(td7);
+//tbl1.appendChild(td8);
+//tbl1.appendChild(td9);
+}
+</script>
+</html>

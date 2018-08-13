@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+canvas
+{
+	height: 500px;
+	width: 500px;
+	border: 1px black solid;
+}
+</style>
+</head>
+<body>
+	
+	<canvas id="c1"></canvas>
+	<input type="button" value="click" onclick="fun1()">
+<p id="p1"></p>
+
+
+	<script type="text/javascript">
+	var count=2;
+	var p1=document.getElementById("p1");
+	var c1=document.getElementById('c1');
+	var ctx=c1.getContext("2d");
+	//first tree
+	ctx.save();
+	ctx.translate(100,150);
+	drawTree(ctx);
+	ctx.restore();
+	function canopy(ctx)
+	{
+		ctx.beginPath();
+		ctx.moveTo(-25,-50);
+		ctx.lineTo(-10,-80);
+		ctx.lineTo(-20,-80);
+		ctx.lineTo(-5,-110);
+		ctx.lineTo(-15,-110);
+		ctx.lineTo(-0,-140);
+
+		ctx.lineTo(15,-110);
+		ctx.lineTo(5,-110);
+		ctx.lineTo(20,-80);
+		ctx.lineTo(10,-80);
+		ctx.lineTo(25,-50);
+		ctx.closePath();
+}
+
+
+ function drawTree(ctx)
+ {
+ 	ctx.fillStyle="brown";
+ 	ctx.fillRect(-5,-50,10,20);
+ 	ctx.fillStyle="green";
+ 	ctx.strokeStyle="yellow";
+ 	ctx.lineWidth="2";
+ 	ctx.lineJoin="round";
+ 	canopy(ctx);
+ 	ctx.fill();
+ 	ctx.stroke();
+
+ 	//shadow
+
+ 	ctx.transform(2,1,0.5,1,1,0);
+ 	ctx.fillStyle="rgba(0,0,0,0.3)";
+ 	 	ctx.fillRect(-5,-50,10,30);
+ 	 	canopy(ctx);
+ 	 	ctx.fill();
+ 	 	
+
+
+
+ }
+
+//second tree
+ 	 	ctx.save();
+ 	 	ctx.translate(200,150);
+ 	 	ctx.scale(0.5,0.8);
+ 	 	ctx.rotate(0.3);
+ 	 	drawTree(ctx);
+ 	 	ctx.restore();
+
+
+ 	 	ctx.save();
+ 	 	ctx.lineJoin="round";
+ 	 	ctx.lineWidth=10;
+ 	 	ctx.strokeStyle="#552200";
+ 	 	ctx.translate(-10,200);
+ 	 	ctx.beginPath();
+ 	 	ctx.moveTo(-100,-100);
+ 	 	ctx.quadraticCurveTo(150,-10,250,-210);
+ 	 	ctx.quadraticCurveTo(-10,150,-110,-150);
+ 	 	ctx.stroke();
+ 	 	ctx.restore();
+
+
+ 	 	function fun1()
+ 	 	{
+ 	 		var x=Math.floor(Math.random()*300);
+ 	 		var y=Math.floor(Math.random()*300);
+ 	 		var a=Math.random();
+ 	 		var b=Math.random();
+ 	 		ctx.save();
+ 	 		ctx.translate(x,y);
+ 	 	ctx.scale(a,b);
+ 	 	ctx.rotate(0.3);
+ 	 	drawTree(ctx);
+ 	 	ctx.restore();
+ 	 	count++;
+		p1.innerHTML="No of trees="+count;
+
+
+
+
+ 	 	}
+
+
+
+
+ </script>
+ </body>
+</html>

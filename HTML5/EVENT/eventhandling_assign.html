@@ -1,0 +1,39 @@
+<html>
+<body id="d1">
+	JS<input type="radio" id="r1" value="JS"><br>
+	PHP<input type="radio" id="r2" value="PHP"><br>
+	HTML5<input type="radio" id="r3" value="HTML5"><br><br>
+	<input type="button" value="click" onclick="fun1()">
+<script src="utility.js">
+</script>
+
+<script>
+var d1=document.getElementById('d1');
+EventUtil.addHandler(d1,"click",fun1);
+
+function fun1(event)
+{
+	var x=event.target.id;
+	switch(x)
+	{
+		case "r1": alert("JS");  
+		break;
+
+		case "r2":	alert("PHP");	
+		break;
+
+
+		case "r3": alert("HTML5");
+		break;
+
+
+	}
+
+
+	}
+
+
+</script>
+
+</body>
+</html>

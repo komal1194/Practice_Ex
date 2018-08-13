@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-1.11.3.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			var arr=[2,4,4,2];
+			var product=1;
+			$.each(arr,function(key,value)
+			{
+				product*=value;
+			})
+			$("#d1").html("Product="+product);
+		})
+	</script>
+</head>
+<body>
+<div id="d1"></div>
+</body>
+</html>

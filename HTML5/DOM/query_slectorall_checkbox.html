@@ -1,0 +1,27 @@
+<html>
+<body>
+	<div id="d1">
+		<input type="checkbox" value="red">red</input><br>
+		<input type="checkbox" value="pink">pink</input><br>
+		<input type="checkbox" value="blue">blue</input><br>
+		<input type="button" value="click" onclick="fun()">
+	</div>
+
+
+		<script>
+		function fun()
+		{
+		var d1=document.getElementById('d1');
+		var x=document.querySelectorAll("input[type=checkbox]:checked");
+
+		for(var i=0;i<x.length;i++)
+		{
+
+			d1.innerHTML+=" "+x[i].value+"<br>"
+		}
+
+	}	
+
+</script>
+</body>
+</html>

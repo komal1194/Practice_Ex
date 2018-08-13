@@ -1,0 +1,29 @@
+<html>
+<body>
+	<input type="button" value="start" onclick="start_Counter()"></input>
+	<input type="button" value="stop" onclick="stop_Counter()"></input>
+	<div id="d1"></div>
+
+<script>
+var w;
+d1=document.getElementById('d1');
+
+function start_Counter()
+{
+	//alert("hi"); 
+if(typeof(Worker)!=="undefined")
+{
+	w=new Worker("ww_count.js"); 
+	w.onmessage=function(event)
+	{
+		d1.innerHTML=event.data;
+	}
+}
+}
+function stop_Counter()
+{
+	w.terminate();
+}
+</script>
+</body>
+</html>

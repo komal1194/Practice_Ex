@@ -1,0 +1,40 @@
+<html>
+	<input type="button" value="BACK" onclick="back()"></input>
+	<body>
+	<script>
+		document.write("<br>---------LOCATION---------<br>");
+		document.write("<br>Pathname:"+Location.pathname);
+		document.write("<br>Hostname:"+Location.hostname);
+		document.write("<br>url:"+Location.href);
+		document.write("<br>Protocol:"+Location.protocol);
+		document.write("<br>port"+Location.port);
+
+
+		document.write("<br>------SCREEN------<br>");
+		document.write("<br>HEIGHT:"+screen.height);
+		document.write("<br> AVAIL HEIGHT:"+screen.availHeight);
+		document.write("<br> COLOR PIXEL:"+screen.colorDepth);
+
+		document.write("<br>----------HESTORY----------<br>");
+		function back()
+		{
+			//history.back();
+			//history.go(+2);
+			history.go(-2);//2 pages back
+		}
+		document.write("<br> LENGTH:"+history.lenght);
+
+		document.write("<br>-------NAVIGATOR--------<br>");
+		for(var i=0;i<navigator.plugins.lenght;i++)
+		{
+			document.write(navigator.plugins[i].name+"<br>");
+		}
+		document.write("<br>---------------plug ins-----------");
+		document.write("<br> Appname:"+navigator.appname);
+		document.write("<br>Platform:"+navigator.platform);
+		document.write("<br>UserAgent:"+navigator.userAgent);
+
+
+	</script>
+	</body>
+</html>

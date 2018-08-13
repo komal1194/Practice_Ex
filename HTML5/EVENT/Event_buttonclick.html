@@ -1,0 +1,32 @@
+<html>
+<body>
+<input type="button" id="b1"value="this is clicked"></input>
+
+<script src="utility.js">
+</script>
+
+<script>
+EventUtil.addHandler(b1,"click",fun);
+EventUtil.addHandler(b1,"mouseover",fun);
+EventUtil.addHandler(b1,"mouseout",fun);
+
+function fun(event)
+{
+if(event.type=="click")
+{
+alert("clicked");
+}
+else if(event.type=="mouseover")
+{
+b1.style.background="blue";
+}
+else if(event.type=="mouseout")
+{
+b1.style.background="red";
+}
+
+}
+
+</script>
+<body>
+</html>

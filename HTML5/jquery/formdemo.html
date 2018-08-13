@@ -1,0 +1,45 @@
+<html>
+<head>
+	<script src="jquery-1.11.3.js"></script>
+	<script>
+	
+	$(document).ready(function()
+	{
+		$("#btn1").click(function()
+		{
+
+		var text=$("#text1").val();
+		var city=$("#select1").val();
+		check=$("input[type=radio]:checked").val();
+		check1=$("input[type=checkbox]:checked").val();
+		//alert(check1);
+		for(i=0;i<=check1.length;i++)
+		{
+			str=check1[i];
+		}
+		
+		str="<tr><td>Name</td><td>"+text+"</td></tr><tr><td>Gender</td><td>"+check+"</td></tr><tr><td>city</td><td>"+city+"</td></tr><tr><td>Hobbies</td><td>"+check1+"</td></tr>";
+		$("#table1").html(str);
+		})
+	})
+
+</script>
+</head>
+<body>
+Enter Name:<input type="text" id="text1"></input><br><br>
+Gender:<input type="radio" name=gender value="Male">Male</input>
+<input type="radio" name=gender value="Female">Female</input><br><Br>
+
+city:<select id="select1">
+	<option>mumbai</option>
+		<option>pune</option>
+			<option>nashik</option>
+</select><br><br>
+
+hobbies:<input type="checkbox" name="check" value="reading">reading&nbsp
+<input type="checkbox" name="check" value="playing">playing<br><Br>
+<input type="button" id="btn1" value="Submit"></input><br><br>
+
+<table id="table1" border=2></table>
+</body>
+</html>

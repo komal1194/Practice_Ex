@@ -1,0 +1,27 @@
+<html>
+<body id="x">
+<input type="radio" value="red" name="r1">Red</input>
+<input type="radio" value="green" name="r2">Green</input>
+<input type="radio" value="yellow" name="r3">Yellow</input>
+<input type="button" value="click" onclick="fun()">
+<script src="utility.js"></script>
+<script>
+	var x=document.getElementById('x');
+    alert(x);
+    EventUtil.addHandler(x,"click",fun);
+
+function fun(event)
+
+{	var y=event.target.innerHTML;
+	switch(y)
+		case r1:
+		document.cookie="color="+x+";Expires Mon, 13 Jun 2017 00:00:01;";
+		break;
+		case r2:
+		document.cookie=
+
+}
+</script>
+
+</body>
+</html>

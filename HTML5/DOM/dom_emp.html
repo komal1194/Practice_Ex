@@ -1,0 +1,64 @@
+<html>
+<body>
+<table id="t1" border="1">
+<tr>
+<th>Emp name</th>
+<th>Emp ID</th>
+<th>Emp dept</th>
+</tr>
+
+<tr>
+<td> A</td>
+<td>1</td>
+<td>IT</td>
+</tr>
+<input type="button" value="click" onclick="fun()">
+<script>
+function fun()
+{
+var x=document.getElementById('t1');
+
+var tr=document.createElement("tr");
+
+var th1=document.createElement("th");
+var th2=document.createElement("th");
+var th3=document.createElement("th");
+
+var tr=document.createElement("tr");
+
+var td4=document.createElement("td");
+var td5=document.createElement("td");
+var td6=document.createElement("td");
+
+
+
+var txtNode1=document.createTextNode("B");
+var txtNode2=document.createTextNode("2");
+var txtNode3=document.createTextNode("IT");
+
+var txtNode4=document.createTextNode("C");
+var txtNode5=document.createTextNode("3");
+var txtNode6=document.createTextNode("IT");
+
+th1.appendChild(txtNode1);
+th2.appendChild(txtNode2);
+th3.appendChild(txtNode3);
+
+td4.appendChild(txtNode4);
+td5.appendChild(txtNode5);
+td6.appendChild(txtNode6);
+
+tr.appendChild(th1);
+tr.appendChild(th2);
+tr.appendChild(th3);
+
+tr.appendChild(td4);
+tr.appendChild(td5);
+tr.appendChild(td6);
+
+x.appendChild(tr);
+}
+</script>
+</table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+	<style type="text/css">
+	canvas{
+		height: 200px;
+		width: 200px;
+		border: 2px solid red;
+	}
+
+	</style>
+</head>
+<body>
+	<canvas id="c1"></canvas>
+<script>
+var canvas=document.getElementById('c1');
+var ctx=canvas.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(25,25);
+
+ctx.quadraticCurveTo(550,750,350,100);
+
+ctx.stroke();
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+	<style>
+	p
+	{
+		height: 200px;
+		width: 200px;
+		border: solid black 1px;
+		background-color: skyblue;
+	}
+</style>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		//$("p").toggle(1800);
+		//$("p").toggle("slow");
+		//$("p").slideToggle("slow");
+		//$("p").fadeToggle();
+		$("p").slideUp();
+	})
+})
+</script>
+</head>
+<body>
+<p>This is pararaph</p>
+<input type="button" id="btn1" value="click">
+</body>
+</html>

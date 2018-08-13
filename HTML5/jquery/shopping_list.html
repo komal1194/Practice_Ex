@@ -1,0 +1,81 @@
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		arr=new Array();
+
+		$("#btn1").click(function()
+		{
+			var txtName=$("#txtName").val();
+			//alert(txtName);
+			var qty=$("#qty").val();
+			//alert(qty);
+			var obj=new List(txtName,qty);
+			arr.push(obj);
+			display();
+
+		})
+
+		$("#u1").on("click","li",function(){
+			var str1=$(this).text();
+			strArr=str1.split("*");
+			//alert(strArr[0]);
+			//alert(strArr[1]);
+			$("#txtName").val(strArr[0]);
+			$("#qty").val(strArr[1]);
+		})
+
+		$("#btn2").click(function()
+		{
+			$.each(arr,function(i,v){
+				var x=$("#txtName").val();
+			
+				if(v.Name==x)
+				{
+					var y=$("#qty").val();
+					v.Quantity=y;
+				}
+			})
+			
+			display();
+		})
+		$("#btn3").click(function()
+		{
+			$.each(arr,function(i,v){
+				if(v.Name==$("#txtName").val())
+				{
+					arr.splice(i,1);
+				}
+
+			})
+			display();
+		})
+
+
+		function List(a,b)
+		{
+			this.Name=a;
+			this.Quantity=b;
+		}
+		function display()
+		{
+			var str="";
+			$.each(arr,function(i,v){
+				str+="<li>"+v.Name+"*"+v.Quantity+"</li>";
+		})
+			$("#u1").html(str);
+		}
+	})		
+</script>
+</head>
+<body>
+Enter Name: <input type="text" id="txtName"></input><br><br>
+Enter Quantity:<input type="text" id="qty"></input><br><br>
+
+<input type="button" id="btn1" value="ADD"></input>&nbsp
+<input type="button" id="btn2" value="UPDATE"></input>&nbsp
+<input type="button" id="btn3" value="DELETE"></input>&nbsp
+<ul id="u1"></ul>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+	<div id="d1"></div>
+<li>Red</li>
+<li>Blue</li>
+<li>Green</li>
+<script src="utility.js"></script>
+<script>
+var list1=document.getElementById("d1");
+EventUtil.addHandler(list1,"click",fun1);
+ function fun1(event)
+{
+	var x=EventUtil.getTarget.innerHTML;
+	alert(x);
+} 
+</script>
+</body>
+</html>

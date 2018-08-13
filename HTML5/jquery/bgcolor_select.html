@@ -1,0 +1,22 @@
+<html>
+<head>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){			
+$("#sel").on("click","option",function(event){
+color=$(this).text();
+alert("color");
+$("body").css("background-color",color);
+})
+})
+</script>
+</head>
+<body>
+<select id="sel">
+	<option id="option1">red</option>
+	<option id="option2">yellow</option>
+	<option id="option3">blue</option>
+</select>
+
+</body>
+</html>

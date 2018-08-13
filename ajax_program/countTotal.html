@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>welcome</title>
+</head>
+<body>
+<div id="mydiv"></div><br><br>
+<input type="button" value="display" onclick=display()>
+<input type="button" value="total" onclick=total()><br><br>
+<div id="result"></div>
+<script type="text/javascript">
+	function display()
+	{
+		var xmlhttp=new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function()
+								{
+									if(xmlhttp.readyState==4 && xmlhttp.status==200)
+									{
+										myfun(xmlhttp.responseText);
+									}
+								}
+		xmlhttp.open("get","displayBook.php",true);
+		xmlhttp.send();
+	}
+	function myfun(str)
+	{
+		var arr=JSON.parse(str);
+		var tab="<table border=2>";
+		tab+="<tr><td>Book Id</td><td>Book Name</td><td>Price</td></tr>";
+		for(var i=0;i<arr.length;i++)
+		{
+			tab+="<tr><td>"+arr[i].bookid+"</td><td>"+arr[i].bookName+"</td><td><input type='checkbox' value="+arr[i].price+">"+arr[i].price+"</input></td></tr>";
+		}
+		tab+="</table>";
+		document.getElementById('mydiv').innerHTML=tab;
+	}
+	function total()
+	{
+		var sum=0;
+		var checkbox=document.querySelectorAll("input[type='checkbox']:checked");
+		for(var i=0;i<checkbox.length;i++)
+		{
+			sum+=Number(checkbox[i].value);
+		}
+		document.getElementById('result').innerHTML="Total="+sum;
+	}
+</script>
+</body>
+</html>

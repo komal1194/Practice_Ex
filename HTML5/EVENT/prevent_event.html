@@ -1,0 +1,15 @@
+<html>
+<body>
+<a href="www.google.com" id="a1">Link</a>
+<script src="utility.js"></script>
+<script>
+var a1=document.getElementById("a1");
+EventUtil.addHandler(a1,"click",fun1);
+function fun1(event)
+{
+	event.preventDefault();
+	alert("this is prevented by me!!!!");
+}
+</script>
+</body>
+</html>

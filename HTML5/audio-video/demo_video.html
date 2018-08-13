@@ -1,0 +1,43 @@
+<html>
+<head>
+<style type="text/css">
+video{
+height:300px;
+width:300px;
+border:2px solid black;
+}
+</style></head>
+<body>
+<video id="video1">
+<source src="mov_bbb.ogg"></video>
+<input type="button" value="play" id="btn1" onclick="playvideo()">
+<input type="button" value="rewind" onclick="rewindvideo()">
+<input type="button" value="forward" onclick="forwardvideo()">
+<script type="text/javascript">
+var video1=document.getElementById('video1');
+var btn1=document.getElementById('btn1');
+function playvideo()
+{
+	video1.play();
+	if(btn1.value=="play")
+	{
+		btn1.value="pause";
+	}
+	else{
+		video1.pause();
+		btn1.value="play";
+
+	}
+}
+function rewindvideo()
+{
+	video1.currentTime=video1.currentTime-2;
+}
+function forwardvideo()
+{
+	video1.currentTime=video1.currentTime+2;
+}
+
+</script>
+</body>
+</html>

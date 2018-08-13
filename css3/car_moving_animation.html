@@ -1,0 +1,54 @@
+
+<html>
+<head>
+	<style>
+	#d1{
+		width: 100px;
+		height: 50px;
+		border: 10px solid red;
+		border-radius: 10px;
+		background-color: red;
+		animation:ex1 4s linear infinite;
+	}
+	#d2
+	{
+		width: 20px;
+		height: 20px;
+		border:10px solid grey;
+		border-radius: 20px;
+		background-color: grey;
+		animation:ex2 4s linear infinite;
+	}
+	#d3{
+		width: 20px;
+		height: 20px;
+		border:10px solid grey;
+		border-radius: 20px;
+		background-color: grey;
+		margin-left: 80px;
+		margin-top: -39px;
+		animation:ex3 4s linear infinite;
+	}
+	@keyframes ex1
+	{
+		0%{transform:translate(1000px,0px)};
+		
+	}
+	@keyframes ex2
+	{
+		0%{transform:translate(1000px,0px) rotate(260deg)};
+		
+	}
+	@keyframes ex3
+	{
+		0%{transform:translate(1000px,0px) rotate(360deg)};
+		
+	}
+	</style>
+	</head>
+	<body>
+		<div id="d1"></div>
+		<div id="d2">o</div>
+		<div id="d3">o</div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+canvas
+{
+	height: 300px;
+	width: 300px;
+	border: 1px black solid;
+}
+</style>
+</head>
+<body>
+	
+	<canvas id="c1"></canvas>
+	<script type="text/javascript">
+	var c1=document.getElementById('c1');
+	var ctx=c1.getContext("2d");
+	
+	var grad=ctx.createLinearGradient(10,50,210,190);
+	grad.addColorStop(0,"green");
+	grad.addColorStop(1,"blue");
+	ctx.fillStyle=grad;
+	ctx.fillRect(10,10,150,80);
+
+	
+
+	</script>
+</body>
+</html>

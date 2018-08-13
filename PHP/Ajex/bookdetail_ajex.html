@@ -1,0 +1,44 @@
+<html>
+<body>
+<input type="button" value="Display" onclick=display()>
+<div id="d1"></div>
+<input type="button" value="Total" onclick=total()><br><br>
+<script type="text/javascript">
+	function display()
+	{
+	var xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange=function()
+	{
+		if(xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+		myFunction(xmlhttp.responseText);
+		}
+	}
+		xmlhttp.open("GET","bookdetail_ajex.php",true);
+		xmlhttp.send();
+	}
+	function myFunction(str)
+	{
+		var arr=JSON.parse(str);
+		var str1="<table border=2>";
+str1+="<tr><td>bookId</td><td>bookName</td><td>price</td></tr>";
+		for(var i=0;i<arr.length;i++)
+		{
+			str1+="<tr><td>"+arr[i].bookId+"</td><td>"+arr[i].bookName+"</td><td><input type='checkbox' value="+arr[i].price+">"+arr[i].price+"</input></td></tr>";
+		}
+		str1+="</table>";
+		document.getElementById('d1').innerHTML=str1;
+	}
+	function total()
+	{
+		var sum=0;
+		var checkbox=document.querySelectorAll("input[type='checkbox']:checked");
+		for(var i=0;i<checkbox.length;i++)
+		{
+			sum+=Number(checkbox[i].value);
+		}
+		document.getElementById('d1').innerHTML="Total="+sum;
+	}
+</script>
+</body>
+</html>

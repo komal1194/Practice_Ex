@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+div{
+   padding:10px;
+	
+	height:200;
+	width:200;
+	border:black 2px dotted;
+	background-color: skyblue;
+}
+</style>	
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+var x=$("input[type=radio]:checked").val();
+alert(x);
+$("div").css("background-clip",x);
+
+})
+})
+</script>
+</head>
+<body>
+<div id="d1">This is div</div><br><br>
+<input type="button" id="btn1" value="click">&nbsp	
+<input type="radio" name=radio value="border-box">border-box&nbsp
+<input type="radio" name=radio value="content-box">content-box&nbsp
+<input type="radio" name=radio value="padding-box">padding-box&nbsp
+
+</body>
+</html>

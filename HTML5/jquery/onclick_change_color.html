@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+div{
+	height:200px;
+	width:200px;
+	border: 1px solid black;
+}
+.a{
+	background-color:red;
+}
+.b{
+	background-color: yellow;
+}
+</style>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function()
+{
+	$("#btn1").click(function(){
+		var d=$("#d1");
+		if(d.hasClass("a"))
+		{
+			d.removeClass("a");
+			d.addClass("b");
+		}
+		else
+		{
+			d.removeClass("b");
+			d.addClass("a")
+		}
+		d.toggleClass('b');
+	})
+})
+</script>
+</head>
+<body>
+<div id="d1" class="a"></div><br>
+<input type="button" id="btn1" value="click">
+</body>
+</html>

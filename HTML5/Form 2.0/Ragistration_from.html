@@ -1,0 +1,65 @@
+<html>
+<head>
+<style type="text/css">
+#t1{
+border: 2px black solid;
+}
+</style>
+
+</head>
+<body><center>
+
+<form>
+	<h1>Registration</h1>
+	<table id="t1" border="2">
+		<tr>
+			<td>Enter Name:</td>
+<td><input type"text" placeholder="First & and Last Name"></td>
+		</tr>
+		<tr>
+			<td>Enter Email_Id</td>
+			<td><input type="email" placeholder="abc@gmail.com"></td>
+		</tr>
+		<tr>
+			<td>Enter Password</td>
+			<td><input type="password"></td></tr>
+			<tr>
+				<td>Enter Age</td>
+				<td><input type="number" min="18" max="58"></td></tr>
+				<tr><td>Enter DOB</td>
+				<td><input type="date" placeholder="dd/mm/yy"/>
+					</td></tr>
+					<tr>
+						<td>Select Gender</td>
+						<td>Male:<input type="radio" value="Male">
+							Female:<input type="radio" value="Female">
+						</td></tr>
+						<tr>
+							<td>Enter Address</td>
+				<td><textarea rows="2"  cols="14"placeholder="address"></textarea></td></tr>
+				<tr><td>Enter Pin Code</td>
+					<td><input type="text" placeholder="pin code"></td></tr>
+					<tr><td>Select City</td>
+						<td><input type="text" list="list1" name="listName"/>
+<datalist id="list1">
+	<option>Pune</option>
+	<option>Mumbai</option>
+	</datalist>
+</td></tr>
+<tr><td>Select State</td>
+	<td><input type="text" list="list2" name="listName"/>
+<datalist id="list2">
+	<option>Maharashtra</option>
+	<option>Rajasthan</option>
+	<option>Karnatka</option>
+	<option>Channai</option>
+	</datalist>
+	<tr><td>Enter Mobile Number</td>
+		<td><input type="text" placeholder="Mobile Number"></td></tr>
+</td></tr>
+
+</table></form>
+<input type="submit" value="submit form">
+<input type="reset" value="Reset"></center>
+</body>	
+</html>

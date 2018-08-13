@@ -1,0 +1,31 @@
+
+<html>
+<head>
+	<script src="jquery-1.11.3.js"></script>
+	<script>
+
+	$(document).ready(function()
+	{
+		$("#btn1").click(function()
+		{
+			var arr=[1,2,3,4,5];
+			var sum=0;
+			$.each(arr,function(key,value)
+			{
+				sum=sum+value;
+			})
+			$("#d1").html(sum);
+		})	
+		
+		
+		
+	})
+
+	</script>
+</head>
+<body>
+<input type="button" id="btn1" value="click"></input>
+<div id="d1"></div>
+
+</body>
+</html>

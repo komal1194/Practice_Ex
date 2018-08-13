@@ -1,0 +1,21 @@
+<html>
+<body>
+<form id="f1">
+	<input type="text" name="txtName1" id="txt1"><br>
+	<input type="text" name="txtName2" id="txt2"><br>
+</form>
+
+<form id="f2">
+<input type="text" name="textName1" id="txt1"><br>
+<input type="text" name="textName2" id="txt2"><br>
+</form>
+<input type="button" value="submit" onclick="fun()">
+<script type="text/javascript">
+function fun()
+{
+	var x=document.forms["f2"].elements[0].id;
+	alert(x);
+}
+</script>
+</body>
+</html>

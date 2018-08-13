@@ -1,0 +1,27 @@
+<html>
+<body>
+<script>
+function Person(name,age,job)
+{
+	this.name=name;
+	this.age=age;
+	this.job=job;
+	this.friends=["Avi","abhi"];
+}
+
+Person.prototype
+{
+	constructor:Person,sayName=function()
+	{
+		aler(this.name);
+	}
+};
+var person1=new Person("komal","23","Software engineer");
+var person2=new Person("kirti","24","Doctor");
+person1.friends.push("van");
+alert(person1.friends);
+alert(person2.friends);
+alert(person1.sayName===person2.sayName);
+</script>
+</body>
+</html>

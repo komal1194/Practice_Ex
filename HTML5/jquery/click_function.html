@@ -1,0 +1,17 @@
+<html>
+<head>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn1").on("click",fun1);
+	//$("#btn1").on({mouseenter,fun1})
+	function fun1(){
+		alert("clicked once only");
+	}
+})
+</script>
+</head>
+<body>
+<input type="button" id="btn1" value="click">
+</body>
+</html>

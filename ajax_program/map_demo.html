@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>welcome</title>
+	<script src="jquery-1.11.3.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			$("#btn").click(function()
+			{
+				var numArray=[4,9,16,25];
+				document.getElementById('d2').innerHTML=(numArray);
+				var newArray=$.map(numArray,function(value,idx)
+				{
+					return Math.sqrt(value);
+				});
+				document.getElementById('d1').innerHTML=(newArray);
+			})
+		})
+	</script>
+</head>
+<body>
+<div id="d2"></div>
+<div id="d1"></div>
+<input type="button" value="click me" id="btn">
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+	<style>
+	#d1{
+		width: 100px;
+		height: 100px;
+		border: 2px solid black;
+	}
+	#d2{
+		width: 100px;
+		height: 100px;
+		border: 2px solid black;
+	}
+	</style>
+</head>
+<body>
+	<div style= "background:red" id="d1"></div><br>
+	<div style= "background:blue" id="d2"</div>
+
+	<script src="utility.js"></script>
+	<script>
+	var d1=document.getElementById("d1");
+	var d2=document.getElementById("d2");
+
+	EventUtil.addHandler(d1,"mouseover",fun1);
+	EventUtil.addHandler(d2,"mouseover",fun1);
+	EventUtil.addHandler(d1,"mouseout",fun1);
+	EventUtil.addHandler(d2,"mouseout",fun1);
+
+	function fun1(event)
+	{
+		if(event.type=="mouseover")
+		{
+			document.bgColor=event.target.style.backgroundColor;
+		}	
+			else if(event.type=="mouseout")
+		{
+			document.bgColor="transparent";
+		}	
+	}
+
+	
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,2320 @@
+﻿/*@charset "UTF-8";*/
+/* CSS Document */
+/*-------------------------- Basic tags overidding starts--------------------------------- */
+body
+{
+	font-family: "Trebuchet MS" , "Trebuchet" , "Verdana" , Sans-serif;
+	font-weight: lighter;
+	font-size: 14px;
+	margin: 0 auto;
+	width: 100%; /*background-image: url(../images/backgroundimg1.jpg);*/
+	height: 100%;
+	background-image: url(../images/page-background.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+a
+{
+	color: #333;
+}
+
+a:hover
+{
+	color: #C31212;
+}
+
+h1
+{
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 50px;
+	vertical-align: middle;
+	color: #666;
+}
+
+/*h2
+{
+	font-size: 20px;
+	font-weight: 200;
+	line-height: 30px;
+	vertical-align: middle;
+	color: #32A5E8;
+}*/
+
+.h2
+{
+	font-size: 24px;
+	color: #C31212;
+	line-height: 30px;
+	vertical-align: middle;
+	padding: 5px 0px 5px 0px;
+}
+
+h3
+{
+	font-size: 18px;
+	font-weight: 100;
+	line-height: 30px;
+	vertical-align: middle;
+	color: #666;
+}
+
+p
+{
+	clear: both;
+}
+
+ul
+{
+	margin-left: -20px;
+}
+li
+{
+	/*list-style-image:url(../images/right.png);*/
+	list-style-type: circle;
+	line-height: 20px;
+	list-style-position: inside;
+}
+/*------------------------- Basic tag overiding ends----------------------------------*/
+/*------------------------------ Header starts---------------------------------------- */
+#outer
+{
+	width: 100%; /*background:#000;*/
+	background: rgba(0, 0, 0, 0.55); /*border: 1px solid #C30; 	border-bottom: solid 5px #CCC;*/
+}
+
+#outer_container
+{
+	margin-right: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 60px;
+}
+/* #outer_container #menu_container */
+#menu_container
+{
+	position: fixed;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 150;
+	height: 60px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center; /*border: 1px solid #fff;*/
+}
+.header
+{
+	width: 1000px;
+	margin: 0 auto;
+	height: 60px; /*border: 1px solid #C30;*/ /*border-bottom: solid 5px #CCC;*/
+	z-index: 800;
+	background: rgba(0, 0, 0, 0.55); /*background:#000;*/ /*border:1px solid #fff;*/
+}
+
+/*--------------------------- Top links container starts------------------------------ */
+.TopContainer
+{
+	width: 1000px;
+	float: left;
+	margin: 0 auto;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+	.TopContainer .logo
+	{
+		/*border:1px solid #fff;*/
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-bottom: 8px;
+		float: left;
+	}
+}
+
+
+.TopContainer .logo
+{
+	/*border:1px solid #fff;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: left;
+}
+
+.TopContainer .TopLinks
+{
+	/*border:1px solid #fff;*/
+	vertical-align: top;
+	float: right;
+	padding-top: 5px;
+	padding-bottom: 10px; /* */
+}
+
+.TopContainer .TopLinks a
+{
+	color: #BBB;
+	text-decoration: none;
+	padding-left: 10px;
+	font-size: 14px;
+}
+
+.TopContainer .TopLinks a:hover
+{
+	color: #C31212;
+	text-decoration: underline;
+}
+
+.slogan
+{
+	/*position:relative;*/ /*top:10px; */ /*float:right;*/ /*width:200px;*/ /* margin-top:20px;*/
+	margin-right: 0px;
+	margin-left: 87px;
+	color: #C31212;
+}
+/*---------------------- Top link container ends---------------------------- */
+
+/*------------------------First page links starts------------------------------*/
+.ReadMore
+{
+	line-height: 25px;
+	font-size: 14px;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #bfd74c;
+	color: #FFF;
+	text-align: center;
+	float: left;
+	border-radius: 4px;
+}
+
+.ReadMore:hover
+{
+	background-color: #999;
+}
+
+.ButtonFullWidth
+{
+	line-height: 30px;
+	font-size: 18px;
+	font-weight: lighter;
+	vertical-align: middle;
+	padding-left: 3px;
+	padding-right: 3px; /*background-color: #D9D5D5; 	color: #C31212;*/
+	background-color: rgba(150,150,150,0.3); /*color: #fff;*/
+	color: #000;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.ButtonFullWidth:hover
+{
+	background-color: #C31212;
+	color: #D9D5D5;
+}
+
+.FullWidthContainer
+{
+	clear: both;
+	width: 990px;
+	margin: 0 auto;
+}
+
+.Facts
+{
+	padding-top: 15px;
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.Title
+{
+	border-left: solid #C31212 6px;
+	margin: 0 auto;
+	width: 100%; /*padding-left: 10px; 	text-align: left; 	margin-bottom: 15px;*/
+}
+
+.Facts .container
+{
+	width: 100%;
+}
+
+.Facts .container h2
+{
+	color: #9CB12D;
+}
+
+.Facts .container .highlight
+{
+	height: 230px;
+	width: 297px;
+	float: left;
+	text-align: left;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: #f8f7f7;
+	padding: 10px 10px 10px 10px;
+	border: 1px solid #ddd;
+}
+.Facts .container .highlight .h2 li
+{
+	list-style-type: none;
+	padding: 0 0 0 45px;
+	position: relative;
+	vertical-align: middle;
+}
+.Facts .container .highlight .h2 li:before
+{
+	/*fill it with a blank space*/
+	content: "\00a0"; /*make it a block element*/
+	display: block; /*adding an 8px round border to a 0x0 element creates an 8px circle*/
+	border: solid 12px #C31212;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	height: 0;
+	width: 0; /*Now position it on the left of the list item, and center it vertically 	(so that it will work with multiple line list-items)*/
+	position: absolute;
+	left: 7px;
+	top: 40%;
+	margin-top: -8px;
+}
+
+.Facts .container .highlight .h2 li:after
+{
+	/*Add another block-level blank space*/
+	content: "\00a0";
+	display: block; /*Make it a small rectangle so the border will create an L-shape*/
+	width: 4px;
+	height: 7px; /*Add a white border on the bottom and left, creating that 'L' */
+	border: solid #fff;
+	border-width: 0 3px 3px 0; /*Position it on top of the circle*/
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	margin-top: -4px; /*Rotate the L 45 degrees to turn it into a checkmark*/
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+
+/* End generating circles*/
+.Facts .container .highlight p
+{
+	/*padding-top: 5px;*/
+	padding-left: 5px;
+}
+
+
+
+.Facts .container .highlight li
+{
+	list-style: circle;
+	list-style-position: inside; /*padding-left: 25px;*/
+}
+
+.paracontainer
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 100%;
+	height: 130px;
+}
+
+.ReadMoreRegular
+{
+	background-color: #D9D5D5;
+	padding-right: 10px;
+	margin-bottom: 15px;
+	line-height: 25px;
+	font-size: 16px;
+	vertical-align: middle;
+	color: #C31212;
+	float: right;
+	margin-top: 10px;
+	padding-left: 15px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.ReadMoreRegular:hover
+{
+	color: #bbb;
+	background-color: #C31212;
+}
+
+#ContentPlaceHolder_Main_Image
+{
+	margin-top: -60px;
+}
+/*----------------------------------First page links ends------------------------------*/
+
+/*-------------------------------------- Header ends--------------------------------- */
+
+/*-------------------------------------- Left div starts------------------------------- */
+#leftdiv
+{
+	/*margin-left:15px;*/
+	margin-left: 10px;
+	background: #F8F8F8;
+	margin-top: 10px;
+	margin-bottom: 10px; /*border:1px solid #c30;*/ /*width: 166px;*/
+	width: 15%;
+	float: left; /*box-shadow:1px 3px 30px 5px #ccc inset;*/ /*box-shadow: 1px 3px 30px 5px  #ccc;*/ /*background-color:#fff;*/ /*border-radius:5px;*/
+}
+
+#vertical-left-menu
+{
+	font-size: 14px;
+	border-left: solid 1px #cccccc;
+	border-right: solid 1px #cccccc;
+}
+#vertical-left-menu-item
+{
+	padding-left: 10px;
+	border-bottom: #CCCCCC thin dotted;
+	line-height: 28px;
+	vertical-align: middle; /*background: url(   "../images/right_img.png" ) no-repeat scroll center right;*/ /*background:url("../images/border_disolve.png") no-repeat right top;*/ /*background:url("../images/left-menu-bg.png") no-repeat scroll center left;*/
+}
+
+#vertical-left-menu-item a
+{
+	text-decoration: none;
+}
+
+#vertical-left-menu-item a.selected
+{
+	background-color: #fff;
+	border: 2px solid #444;
+	color: #005bff;
+	text-decoration: none;
+}
+
+/*#vertical-left-menu-item a.visited{
+	background-color:#C30;
+	font-size:x-large;
+	/*background:url("../images/left-menu-bg-hover.png") no-repeat scroll center left;}*/
+
+#vertical-left-menu-item:hover
+{
+	/*background: url(   "../images/left_img.png" ) no-repeat scroll center right;*/
+	color: #C31212; /*background:url("../images/left-menu-bg-hover.png") no-repeat scroll center left;*/
+}
+
+/*#vertical-left-menu-item:active{
+	background-color:#000000;
+	/*background:url("../images/left-menu-bg-hover.png") no-repeat scroll center left;
+}*/
+
+/*#vertical-left-menu-item.current-page-item a.active:after {
+	background-color:#C30;
+	/*background:url("../images/left-menu-bg-hover.png") no-repeat scroll center left;
+}*/
+
+#category-title
+{
+	font-family: Trebuchet MS;
+	font-size: 16px;
+	color: #fff;
+	background-color: #C31212;
+	line-height: 30px;
+	padding-left: 10px;
+	vertical-align: middle;
+	margin-top: 5px; /*border-radius:8px;*/ /*margin-bottom:5px; */ /*box-shadow:1px 1px 4px 4px #eee;*/
+}
+
+#category-title a
+{
+	color: #fff;
+}
+
+#select_menu
+{
+	font-family: Trebuchet MS;
+	color: #C31212;
+	background: #c31212;
+	color: #fff;
+	border-bottom: 1px solid #cccccc;
+	line-height: 30px;
+	font-size: 18px;
+	padding-left: 10px;
+	vertical-align: middle;
+}
+
+#leftdiv_static
+{
+	width: 25%;
+	margin-top: 30px;
+	border: none; /*border: 1px solid #c30;*/
+	float: left; /*border: 1px solid #c30;*/
+}
+
+#leftdiv_static h1
+{
+	color: #C31212; /*font-weight:bold;*/
+	line-height: 30px;
+	border-bottom: solid 1px #CCCCCC;
+	font-weight: normal;
+	border: none;
+	padding-left: 20px;
+	font-size: 50px;
+}
+
+#leftdiv_static h1
+{
+	color: #C31212; /*font-weight:bold;*/
+	border-bottom: solid 1px #CCCCCC;
+	font-weight: normal;
+	border: none;
+	padding-left: 20px;
+	font-size: 50px;
+	line-height: 60px;
+	margin-top: 10px;
+}
+
+#leftdiv_static h2
+{
+	color: #C31212; /*font-weight:bold;*/
+	line-height: 30px;
+	border-bottom: solid 1px #CCCCCC;
+	font-weight: normal;
+	border: none;
+	padding-left: 20px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+/*
+.leftdiv_static_title
+{
+	color: #C31212; 
+	line-height: 30px;
+	border-bottom: solid 1px #CCCCCC;
+	font-weight: normal;
+	border: none;
+	padding-left: 40px;
+	font-size: 48px;
+}
+*/
+
+/*------------------------------ Left div ends--------------------------------- */
+
+/*----------------------------Upper Menu Starts  ----------------------------*/
+
+.upper_outer_menu
+{
+	height: 40px;
+	margin-top: 2%; /* border: 1px solid #fff; */
+	width: 100%;
+}
+
+.upper_inner_menu
+{
+	width: 94%;
+	background: rgba(255,0,0,0.5);
+	height: 40px;
+	margin-left: 3%;
+	margin-right: 2%; /* border: 1px solid #c30;*/
+}
+
+.uppermenu
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0; /*  margin-left: 3%;*/
+	background: rgba(255, 0, 0, 0.6); /*margin-right: 1%;*/
+}
+.uppermenu li
+{
+	list-style-type: none;
+	float: left;
+	font-size: 18px;
+	margin-left: 0px;
+	padding-left:5px;
+	padding-right:5px;
+	color: #fff;
+	height: 40px; /*border:1px solid #c30;*/
+}
+
+
+.uppermenu li:hover
+{
+	/*background: #c30;*/
+	background: rgba(0,0,0,0.3);
+	color: #fff; /*  height: 30px;*/
+}
+
+.uppermenu li a
+{
+	line-height: 40px;
+	vertical-align: middle;
+	color: #fff;
+	margin-top: 0px;
+	margin-left: 0px;
+	padding-left:5px;
+	padding-right:5px;
+	height: 40px; /* border:1px solid #fff;*/
+}
+
+
+.uppermenu li a:hover
+{
+	/*  background: #c30;*/
+	color: #fff;
+	height: 40px;
+		margin-top: 0px;
+	margin-left: 0px;
+	padding-left:5px;
+	padding-right:5px;
+	
+}
+
+.uppermenu_selected
+{
+	background: rgba(0,0,0,0.3);
+	color: #fff;
+}
+
+/*----------------------------Upper Menu Ends  ----------------------------*/
+
+
+/*---------------------------- Middle div starts------------------------------ */
+#outer_middle_container
+{
+	width: 100%;
+	margin: 0 auto;
+	height: 100%; /*width: 1000px;*/ /*border:1px solid #c30;*/ /*background-image: url(../images/image3.jpg);*/ /*background-image: url(../images/image5.gif);*/ /*background-repeat: no-repeat;*/ /*background: rgba(255,255,255,0.5);*/ /*background:#ffffff;*/ /*border:1px solid #000;*/
+	overflow: hidden;
+}
+
+
+#outer_inner_middle_container
+{
+	margin-left: 3%;
+	margin-right: 3%; /*margin-top: 1%;*/
+	margin-bottom: 1%;
+	width: 94%;
+	height: 100%;
+	overflow: hidden;
+	background: rgba(255,255,255,0.95);
+}
+
+#outer_inner_middle_container p
+{
+	margin-left: 10px;
+}
+
+#middlecontainer
+{
+	/*width: 100%;*/
+	overflow: hidden;
+	margin: 0 auto; /*height: 100%;*/ /*width: 1000px;*/ /*border:1px solid #c30;*/ /*background-image: url(../images/image1.jpg); 	background-repeat: no-repeat;*./ 	/*background:#000;*/ /*height:100%;*/
+}
+
+
+#middlediv
+{
+	/*width: 612px;*/
+	width: 60%;
+	float: left;
+	margin-left: 25px;
+	margin-top: 0px;
+	margin-right: 15px; /*border:1px solid #c30;*/
+}
+
+#middlediv_static_page
+{
+	width: 70%;
+	float: left;
+	margin-left: 25px;
+	margin-top: 30px; /*border: 1px solid #c30;*/
+	margin-right: 15px; /*border: 1px solid #c30;*/
+}
+
+#middlediv_static_page #info
+{
+	font-size: 14px;
+	color: #333333;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+
+
+#middlediv p
+{
+	font-size: 14px;
+}
+
+#middlediv b
+{
+	font-size: 14px;
+}
+
+#middlediv ul li
+{
+	font-size: 13px;
+	list-style-position: inside;
+}
+
+.page_title
+{
+	color: #C31212;
+	font-size: 24px; /*font-weight:bold;*/
+	line-height: 30px;
+	border-bottom: solid 1px #CCCCCC;
+	font-weight: normal;
+}
+
+#middlediv #info
+{
+	font-size: 14px;
+	color: #333333;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+/*#middlediv #info ul
+{
+	margin-left: 25px;
+	padding-top: 10px;
+}
+*/
+#middlediv #info p
+{
+	padding-top: 10px;
+}
+
+#middlediv #info h2
+{
+	color: #C31212;
+}
+
+/*------------------------------- Middle div ends--------------------------------- */
+/*-------------------------Right div data starts----------------------------*/
+#rightdivMaster
+{
+	vertical-align: top;
+	color: #666666;
+	font-size: 12px;
+	height: auto;
+	overflow: hidden; /*height: 100px;*/ /*margin-left: 15px;*/
+	margin-right: 10px;
+	margin-top: 10px;
+	 /*width: 165px;*/
+	width: 15%; /*border:1px solid #c30;*/ /*float: left;*/
+	float: right;
+}
+
+#rightdiv
+{
+	display: none;
+}
+
+/*-------------------------Right div data ends----------------------------*/
+/*---------------------- Main Image inner page starts------------------------- */
+#midddlediv-main-image
+{
+	margin: 0px auto;
+	width: 100%;
+	margin-top: -65px;
+}
+
+#midddlediv-main-image img
+{
+}
+
+#midddlediv-main-image span
+{
+	position: absolute; /*top: 231px;*/
+	top: 100px;
+	left: 151px;
+	height: 35px;
+	z-index: 2;
+}
+
+#midddlediv-main-image span h1
+{
+	color: #000000;
+	font-size: 20px;
+	z-index: 2;
+}
+
+
+#outer_midddlediv_main_image span h1 /*for course details page*/
+{
+	color: #000;
+	font-size: 25px;
+	padding-top: 100px;
+	padding-left: 100px;
+	z-index: 2; /*	margin-top:20px; 	margin-left:20px;*/
+}
+/*---------------------- Main Image inner page ends-------------------------- */
+
+
+/*----------------------- Client page table style starts------------------------- */
+
+#client_table_border
+{
+	margin-top: -40px;
+}
+
+#client_table_border td
+{
+	/*border: solid 1px #ccc;*/ /*padding-top:5px; 	padding-bottom:5px;*/
+	padding: 3px 3px 3px 3px;
+}
+
+#client_table_border td a
+{
+	margin-top: 0px;
+	margin-left: 0px; /*border: solid 1px #c30;*/
+}
+
+#client_table_border td img
+{
+	margin-top: 0px;
+	/*padding: 10px 10px 10px 10px;*/
+	padding: 5px 5px 5px 5px;
+	border: 1px solid #ccc;
+	width: 120px;
+	height: 40px;
+}
+/*------------------------ Client page table style ends-------------------------- */
+
+/*------------------------- Gallery page style starts---------------------------- */
+.divimage
+{
+	border: solid 10px #fff; /*margin-top: 5px; 	margin-left: 5px; 	margin-right: 5px; 	margin-bottom: 5px;*/
+}
+
+
+
+/*-------------------------- Gallery page style ends----------------------------- */
+
+/*----------------------------Tab panel style starts -----------------------------*/
+
+.Panel_table
+{
+	margin-top: 7px; /*border:#FFFFFF thin dotted;*/ /*margin-top: -25px;*/ /* background-image:url(../images/backgroundimg1.jpg);*/
+}
+.Table_Border_None
+{
+	border: none;
+	padding: 10px 0px opx 0px;
+}
+
+.Table_Border_None td
+{
+	border: none;
+	padding: 3px;
+}
+
+#Panel_Contents
+{
+	width: 557px;
+}
+
+#TabPanel_Contents table tr td ul li
+{
+	width: auto;
+}
+
+.course_details_header
+{
+	font-size: 14px;
+}
+
+.course_details_header_box
+{
+	/*padding-left: 10px;*/
+	background: #F8F8F8;
+	border-top: 1px solid #bbb;
+	box-shadow: 0px 5px 3px 1px #BBB;
+}
+
+.Table_Border_Thin td
+{
+	/*border:dotted thin #CCCCCC;*/
+	padding: 1px;
+}
+
+.hideColumn
+{
+	display: none;
+}
+
+.TABLE.tabulardata
+{
+}
+
+TABLE.tabulardata tr:hover
+{
+	background-color: #ddd; /*border:solid 1px #DDDDDD;*/
+	cursor: pointer;
+	color: #C31212;
+}
+
+.tabulardata th
+{
+	background-color: #EEEEEE; /*border:solid 1px #DDDDDD;*/
+	color: #666666;
+	font-size: 14px;
+	text-align: left;
+}
+
+.tabulardata td
+{
+	/*border:solid 1px #DDDDDD;*/ /*color:#666666;*/
+	padding: 2px;
+	padding-left: 5px; /*background-color:White;*/
+	font-size: 14px;
+}
+
+.Alternate_Row_Style
+{
+	background-color: #FEFEFE;
+}
+
+a:hover
+{
+	cursor: pointer;
+	color: #C31212;
+}
+
+.Panel_Show_Recent_News_Style
+{
+	margin-left: 5px;
+}
+
+.Single_News_Style
+{
+	list-style-position: outside;
+	background-image: url(../images/bullete.gif);
+	background-position: left;
+	background-repeat: no-repeat;
+	margin-left: 5px;
+}
+/*----------------------------Tab panel ends-----------------------------*/
+
+/*------------------------ Contact-us style starts-------------------------- */
+.contact_table
+{
+	padding: -5px 10px 0px 10px;
+	width: 100%;
+}
+
+.heading_contactus
+{
+	font-size: 22px;
+	margin-top: 0px;
+	color: #C31212;
+	/*text-decoration: underline;*/ /*	border-bottom:1px solid #C31212;*/
+}
+.subheading
+{
+	width: 100%;
+	font-size: 18px;
+	border-bottom: 1px solid #ccc;
+	float: left;
+	padding: 5px 0px 5px 0px;
+}
+
+.ContactUs_Map
+{
+	z-index: 5;
+	clear: both;
+	width: 98%;
+	height: 330px;
+	padding-top: 0px;
+	border: solid 1px #EEEEEE;
+}
+
+
+#map
+{
+	width: 100%;
+	height: 315px;
+	margin-left: 5px;
+}
+
+.contactus_div
+{
+	border-bottom: solid 1px #CCCCCC;
+	margin-bottom: 0px;
+	height: 0px;
+	width: 350px;
+}
+.Loading_Image_Style
+{
+	/*background-color:#FFFFFF;*/
+	color: #000000; /*border:solid 1px #666666;*/
+	font-weight: bold;
+	font-size: 16px;
+	margin-left: 50px;
+	margin-top: -25px;
+	float: left;
+}
+
+.contact_loading_img
+{
+	margin: 0 auto;
+	width: 32px;
+	height: 32px;
+}
+
+.style1
+{
+	width: 126px;
+	height: 30px; /*padding-bottom:10px;*/
+}
+
+.fields_style
+{
+	color: Red;
+}
+.text_box
+{
+	/*display: block;*/ /*padding:3px;*/ /* padding-top:0px;*/
+	outline: none;
+	height: 20px;
+	width: 200px;
+	border: 3px solid #ebe6e2;
+	border-radius: 5px;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+
+.text_box:hover
+{
+	border-color: #CCC;
+}
+
+.text_box:focus
+{
+	border: thick 4px #737660;
+	box-shadow: 2px 2px 8px 8px #ccc;
+}
+
+input[type="checkbox"]
+{
+	margin: 5px 10px 0px 10px;
+}
+
+.contactus_panel
+{
+	display: none;
+	width: 400px;
+}
+
+.message_panel
+{
+	width: 100%;
+	border-style: double;
+	border-width: 5px;
+	border-color: #A0D3FE;
+	background-color: White;
+}
+
+.message_table
+{
+	color: #000000;
+	background: #F0FBFF;
+	text-align: center;
+	font-size: 13px;
+}
+
+.image_panel
+{
+	text-align: center;
+}
+
+.modalBackground_contact
+{
+	background-color: #CCCCCC;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	color: #C31212;
+}
+
+.loading_table
+{
+	width: 500px;
+	background-color: #EBEBEB;
+	margin-left: -100px;
+}
+
+#Background
+{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: #bbb;
+	filter: alpha(opacity=40);
+	opacity: 0.4;
+}
+
+
+#Progress
+{
+	position: fixed;
+	top: 40%;
+	left: 30%;
+	width: 400px;
+	height: 60px;
+	text-align: center;
+	background-color: #fff;
+	border: solid 3px black;
+}
+
+.tab_position
+{
+	visibility: visible;
+	position: absolute;
+	left: 200px;
+	top: 200px;
+}
+
+.popup_label
+{
+	/*padding-top: 10px;*/
+	float:left;
+	color: #000;
+	padding-top:20px;
+}
+
+.popup_image
+{
+	padding-top: 5px;
+	float: left;
+}
+/*------------------------- Contact-us style ends----------------------------------- */
+
+/*---------------------------News Style Starts--------------------------------------*/
+.News_Show .News
+{
+	border-bottom: solid thin #F2F2F2;
+}
+
+.News_Show .Date
+{
+	float: right;
+	border: solid thin #F2F2F0;
+	background-color: #F2F2F2;
+	color: #666666;
+}
+
+.News_Show .Heading
+{
+	font-size: 14px;
+	font-weight: bold;
+	float: left;
+}
+
+.News_Show .Description
+{
+	clear: both;
+}
+
+.News_Show_Home
+{
+}
+
+.News_Show_Home ul
+{
+	padding-left: 10px;
+}
+
+.News_Show_Home li
+{
+	padding-left: 2px;
+}
+/*---------------------------News Style Ends--------------------------------------*/
+/*----------------------Careers page styles starts-------------------------------- */
+#job
+{
+	border-bottom: #CCCCCC thin dotted;
+	margin-top: 20px;
+}
+
+#jobtitle
+{
+	font-size: 14px;
+	padding-left: 10px;
+	border-bottom: #CCCCCC thin dotted;
+	height: 25px;
+	line-height: 25px;
+	vertical-align: middle;
+}
+
+#job-req-skills
+{
+	padding-left: 10px;
+}
+
+#job-desc
+{
+	padding-left: 10px;
+}
+
+#job-code
+{
+}
+
+#smallpunchline
+{
+	font-size: 12px;
+}
+/*----------------------------- Careers page styles ends----------------------------- */
+
+/*-------------------------Course description styles starts-------------------------- */
+.course_title
+{
+	color: #C30;
+	color: #C31212;
+	color: #FFF;
+	font-size: 23px; /* font-weight: bold; */
+	line-height: 30px;
+	border-bottom: solid 1px #CCC;
+	background: #C31212;
+	text-indent: 10px; /* padding-left: 10px; */
+	margin: 0px 0px 0px 0px; /* background: rgba(255, 0, 0, 0.6); */ /*font-weight:bold; 	font-size:14px; 	 color:#CC3300; 	text-decoration:underline; 	*/
+}
+
+.course_title a
+{
+	color:#fff;
+}
+
+.course_title a:hover
+{
+	color:#000;
+}
+.course_title h1
+{
+	color: #CC3300;
+	color: #C31212;
+	color: #fff;
+	font-size: 23px; /*font-weight:bold;*/
+	line-height: 30px;
+	border-bottom: solid 1px #CCCCCC;
+	background: #c31212;
+	text-indent: 10px; /*padding-left: 10px;*/
+	margin: -1px -1px 0px -1px; /*margin-left: 0px; 	margin-top: 0px;*/ /*background: rgba(255, 0, 0, 0.6);*/
+}
+
+/*.course_title h1
+{
+	color: #CC3300;
+	color: #C31212;
+	font-size: 23px;
+	line-height: 30px;
+	border-bottom: solid 1px #CCCCCC;
+}*/
+
+.course-duration-prereq
+{
+	/*background-color:#F2F2F2;*/ /*background-image:url(../images/backgroundimg1.jpg);*/
+	padding-left: 10px;
+	font-size: 14px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	line-height: 20px;
+	vertical-align: middle;
+}
+
+.course_details_title
+{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.modalBackground
+{
+	background-color: #414141;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+	position: absolute;
+	text-align: center;
+}
+
+.course_dropdown
+{
+	border-bottom: #CCCCCC thin dotted;
+	line-height: 28px;
+	vertical-align: middle;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/*----------------------- Course description styles ends---------------------------- */
+
+/*----------------------- Sitemap  page styles starts-------------------------------- */
+
+#sitemap_title
+{
+	font-size: 16px;
+	line-height: 30px;
+	vertical-align: middle;
+	margin-top: 5px;
+	color: #000;
+	text-decoration: none; /*background-color: #F2F2F2;*/
+	background-color: #ddd;
+}
+#sitemap_title li, a
+{
+	line-height: 30px;
+	vertical-align: middle;
+	margin-top: 5px;
+	margin-left: 20px;
+	color: #000;
+	text-decoration: none;
+}
+/*-------------------------Sitemap  page styles ends---------------------------- */
+
+
+
+/*--------------------------- Footer Starts--------------------------------------------- */
+
+.Footermain
+{
+	margin-top: 20px;
+	background-color: #000;
+	width: 100%;
+}
+
+.FooterContainer
+{
+	clear: left;
+	background-color: #000;
+	height: 250px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.Footer
+{
+	background-color: #000;
+	padding-left: 0px;
+	width: 100%;
+	margin: 0 auto;
+}
+.Footer .List
+{
+	float: left;
+	width: 20%;
+	height: 220px;
+}
+
+.Footer .List p
+{
+	margin-left: 8px;
+	line-height: 15px;
+	color: #AAA;
+}
+
+.Footer h3
+{
+	color: #FFF;
+}
+
+.FooterTitle
+{
+	padding-left: 8px;
+}
+.Footer ul
+{
+	padding-left: 10px;
+	margin-left: 0px;
+}
+.Footer li, .Footer li a
+{
+	color: #AAA;
+	line-height: 25px;
+	margin-left: 0px;
+}
+.Footer li a:hover
+{
+	color: #C31212;
+}
+
+
+/*.Contact
+{
+	clear: both;
+	color: #BBB;
+	font-size: 16px;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}*/
+
+.copyright_statement
+{
+	clear: both;
+	color: #BBB;
+	font-size: 16px;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+
+
+/*-------------------------------- Footer Ends-------------------------------- */
+
+/*------------------------ Social Media links Starts------------------------- */
+
+.defaultpage
+{
+	clear: both;
+	width: 100%;
+	height: 28px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	border-bottom: solid 0.08em #ccc;
+	margin: 0 auto;
+}
+.SocialMediaLinks
+{
+	clear: both;
+	width: 100%; /*height: 28px;*/
+	padding-bottom: 2px;
+	height: 30px;
+	border-bottom: solid 0.08em #312C2C;
+	margin: 0 auto;
+}
+.SocialMediaLinks .container
+{
+	width: 100%;
+	margin: 0 auto;
+	clear: both;
+}
+
+.SocialMediaLinks .container a
+{
+	text-decoration: none;
+	margin-left: 5px;
+}
+
+.SocialMediaLinks .container a img
+{
+	/*margin-left: 5px;*/
+	text-decoration: none;
+}
+
+.liregular
+{
+	list-style-image: url(../images/icons/bullet.png);
+	list-style-position: outside;
+}
+/*--------------------------------- Social Media links ends-------------------------------------- */
+
+/*--------------------------------DMAD default page style starts-------------------------------*/
+table.gridtable
+{
+	float: left;
+	width: 100%;
+	text-align: left;
+	margin-right: 10px;
+	margin-left: 50px;
+	border-width: 1px;
+	border-color: #ccc;
+	border-collapse: collapse;
+	font-size: 14px;
+	color: #333333;
+}
+table.gridtable th
+{
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #ccc; /*background-color: #dedede;*/
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ccc), color-stop(1, #bbb) );
+	background: -moz-linear-gradient(#ccc, #bbb);
+}
+table.gridtable td
+{
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: #ccc; /*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ccc), color-stop(1, #dedede) );*/
+}
+
+.ButtonFullWidthDefault
+{
+	line-height: 30px;
+	font-size: 18px;
+	font-weight: lighter;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #32A5E8;
+	color: #FFF;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.ButtonFullWidthDefault:hover
+{
+	background-color: #bfd74c;
+}
+
+.FullWidthContainerDefault
+{
+	width: 612px;
+	float: left;
+	margin-left: 25px;
+	margin-right: 0px;
+}
+
+.FactsDefault
+{
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.TitleDefault
+{
+	border-left: solid #C31212 10px;
+	padding-left: 10px;
+	text-align: left;
+	margin-bottom: 5px;
+	font-size: 28px;
+	font-weight: 300;
+	line-height: 50px;
+	vertical-align: middle;
+	color: #666;
+}
+
+
+.FactsDefault .container h2
+{
+	color: #9CB12D;
+}
+
+.FactsDefault .container .highlight
+{
+	width: 100%;
+	float: left;
+	text-align: left;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+.FactsDefault .container .highlight .h2 li
+{
+	list-style-type: none;
+	padding: 0 0 0 45px;
+	position: relative;
+	vertical-align: middle;
+}
+
+.FactsDefault .container .highlight .h2 li:before
+{
+	/*fill it with a blank space*/
+	content: "\00a0"; /*make it a block element*/
+	display: block; /*adding an 8px round border to a 0x0 element creates an 8px circle*/
+	border: solid 12px #C31212;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	height: 0;
+	width: 0; /*Now position it on the left of the list item, and center it vertically 	(so that it will work with multiple line list-items)*/
+	position: absolute;
+	left: 7px;
+	top: 40%;
+	margin-top: -8px;
+}
+
+.FactsDefault .container .highlight .h2 li:after
+{
+	/*Add another block-level blank space*/
+	content: "\00a0";
+	display: block; /*Make it a small rectangle so the border will create an L-shape*/
+	width: 4px;
+	height: 7px; /*Add a white border on the bottom and left, creating that 'L' */
+	border: solid #fff;
+	border-width: 0 3px 3px 0; /*Position it on top of the circle*/
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	margin-top: -4px; /*Rotate the L 45 degrees to turn it into a checkmark*/
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+/* End generating circles*/
+.FactsDefault .container .highlight p
+{
+	padding-top: 10px;
+}
+
+
+.FactsDefault .container .highlight li
+{
+	list-style: circle;
+	list-style-position: inside;
+	padding-left: 30px;
+}
+
+
+.ReadMoreRegularDefault
+{
+	/*text-align:right;*/
+	padding-right: 30px;
+	padding-bottom: 10px;
+	line-height: 10px;
+	font-size: 16px;
+	vertical-align: middle;
+	color: #C31212;
+	padding-left: 600px; /*float:right;*/
+	margin-top: 0px;
+}
+.ReadMoreRegularDefault:hover
+{
+	color: #C31212;
+	text-decoration: underline;
+}
+
+/*--------------------------------DMAD default page style ends--------------------------------*/
+
+
+/*----------------------------DMAD course modules  page style starts-----------------------------*/
+.accordionContent
+{
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-bottom: dotted 1px #ccc;
+	font-size: 14px;
+	color: #000; /*background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dedede), color-stop(1, #bbb) );*/
+}
+.accordionHeader
+{
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-top: dotted 1px #ccc;
+	border-bottom: dotted 1px #ccc;
+	height: 25px;
+	padding: 5px;
+	color: #000;
+	font-weight: bold;
+	font-size: 14px; /*font-weight:bold;*/ /*box-shadow: 1px 3px 30px 5px #ccc inset;*/
+	border-bottom: solid 1px #ddd;
+	background: url(    "../images/arrowdown.png" ) no-repeat scroll center left 10px;
+	text-indent: 20px; /*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #afaba7), color-stop(1, #bbb) ); */
+}
+.accordionHeader:hover
+{
+	color: #C31212; /*box-shadow:1px 3px 30px 5px #ccc inset;*/
+}
+.accordionHeaderSelected
+{
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-bottom: dotted 1px #ccc;
+	border-top: dotted 1px #ccc;
+	background: url(    "../images/arrowup.png" ) no-repeat scroll center left 10px;
+	text-indent: 20px;
+	font-size: 14px;
+	color: #C31212;
+	padding: 5px;
+	font-weight: bold; /*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #afaba7), color-stop(1, #bbb) );*/ /*box-shadow: 1px 3px 30px 5px #bbb inset;*/
+}
+.accordionHeaderSelected:hover
+{
+	color: #C31212; /*box-shadow:1px 3px 30px 5px #bbb inset;*/
+}
+
+/*----------------------------DMAD course modules page style ends-----------------------------*/
+
+/*---------------------------DMAD faculties page style starts--------------------------------------*/
+.FullWidthContainerdmad_facul
+{
+	width: 590px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 0px;
+}
+.Factsdmad_facul
+{
+	padding-top: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 590px;
+	margin: 0 auto;
+}
+
+.Factsdmad_facul .container h2
+{
+	color: #9CB12D;
+}
+.Factsdmad_facul .container .highlight
+{
+	background: #f8f7f7;
+	width: 100%;
+	float: left;
+	text-align: left;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+}
+
+
+.Factsdmad_facul .container .highlight .h2 li
+{
+	list-style-type: none;
+	padding: 0 0 0 45px;
+	position: relative;
+	vertical-align: middle;
+	font-size: 18px;
+}
+
+.Factsdmad_facul .container .highlight .h2 li:before
+{
+	/*fill it with a blank space*/
+	content: "\00a0"; /*make it a block element*/
+	display: block; /*adding an 8px round border to a 0x0 element creates an 8px circle*/
+	border: solid 12px #C31212;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	height: 0;
+	width: 0; /*Now position it on the left of the list item, and center it vertically 	(so that it will work with multiple line list-items)*/
+	position: absolute;
+	left: 7px;
+	top: 40%;
+	margin-top: -8px;
+}
+.Factsdmad_facul .container .highlight .h2 li:after
+{
+	/*Add another block-level blank space*/
+	content: "\00a0";
+	display: block; /*Make it a small rectangle so the border will create an L-shape*/
+	width: 4px;
+	height: 7px; /*Add a white border on the bottom and left, creating that 'L' */
+	border: solid #fff;
+	border-width: 0 3px 3px 0; /*Position it on top of the circle*/
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	margin-top: -4px; /*Rotate the L 45 degrees to turn it into a checkmark*/
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+
+
+/* End generating circles*/
+.Factsdmad_facul .container .highlight p
+{
+	margin-top: 0px;
+	padding-left: 50px;
+}
+
+
+
+/*---------------------------DMAD faculties page style ends--------------------------------------*/
+
+/*---DMAD recruitment page(dmad_recruitment.aspx), Corporate recruitment page(corporate_recruitment.aspx) styles starts-----*/
+
+.FullWidthContainer_rec
+{
+	width: 590px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 0px;
+}
+.Facts_rec
+{
+	padding-top: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 590px; /*margin: 0 auto;*/
+}
+
+.Facts_rec .container h2
+{
+	color: #9CB12D;
+}
+.Facts_rec .container .highlight
+{
+	width: 100%;
+	float: left;
+	text-align: left;
+	margin-right: 0px;
+}
+.Facts_rec .container .highlight .h2 li
+{
+	list-style-type: none;
+	padding: 0 0 0 45px;
+	position: relative;
+	vertical-align: middle;
+	font-size: 18px;
+}
+.Facts_rec .container .highlight .h2 li:before
+{
+	/*fill it with a blank space*/
+	content: "\00a0"; /*make it a block element*/
+	display: block; /*adding an 8px round border to a 0x0 element creates an 8px circle*/
+	border: solid 12px #C31212;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	height: 0;
+	width: 0; /*Now position it on the left of the list item, and center it vertically 	(so that it will work with multiple line list-items)*/
+	position: absolute;
+	left: 7px;
+	top: 40%;
+	margin-top: -8px;
+}
+.Facts_rec .container .highlight .h2 li:after
+{
+	/*Add another block-level blank space*/
+	content: "\00a0";
+	display: block; /*Make it a small rectangle so the border will create an L-shape*/
+	width: 4px;
+	height: 7px; /*Add a white border on the bottom and left, creating that 'L' */
+	border: solid #fff;
+	border-width: 0 3px 3px 0; /*Position it on top of the circle*/
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	margin-top: -4px; /*Rotate the L 45 degrees to turn it into a checkmark*/
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+/* End generating circles*/
+.Facts_rec .container .highlight p
+{
+	margin-top: 0px;
+	padding-left: 50px;
+}
+
+/*-----DMAD recruitment page(dmad_recruitment.aspx), Corporate recruitment page(recruit_from_bitcode.aspx) styles ends-------------*/
+
+/*-----------DMAD placement page(dmad_placement),Placement default page,Development default page styles starts-------------------------------*/
+.FullWidthContainer_pla
+{
+	width: 590px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 0px;
+}
+.Facts_pla
+{
+	/*padding-top: 10px;*/
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 590px; /*margin: 0 auto;*/
+}
+.Facts_pla .container h2
+{
+	color: #9CB12D;
+}
+.Facts_pla .container .highlight
+{
+	width: 100%;
+	float: left;
+	text-align: left;
+	margin-right: 0px;
+}
+.Facts_pla .container .highlight .h2 li
+{
+	list-style-type: none;
+	padding: 0 0 0 45px;
+	position: relative;
+	vertical-align: middle;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 40px;
+}
+.Facts_pla .container .highlight .h2 li:before
+{
+	/*fill it with a blank space*/
+	content: "\00a0"; /*make it a block element*/
+	display: block; /*adding an 8px round border to a 0x0 element creates an 8px circle*/
+	border: solid 12px #C31212;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	height: 0;
+	width: 0; /*Now position it on the left of the list item, and center it vertically 	(so that it will work with multiple line list-items)*/
+	position: absolute;
+	left: 7px;
+	top: 40%;
+	margin-top: -8px;
+}
+.Facts_pla .container .highlight .h2 li:after
+{
+	/*Add another block-level blank space*/
+	content: "\00a0";
+	display: block; /*Make it a small rectangle so the border will create an L-shape*/
+	width: 4px;
+	height: 7px; /*Add a white border on the bottom and left, creating that 'L' */
+	border: solid #fff;
+	border-width: 0 3px 3px 0; /*Position it on top of the circle*/
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	margin-top: -4px; /*Rotate the L 45 degrees to turn it into a checkmark*/
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+/* End generating circles*/
+.Facts_pla .container .highlight p
+{
+	margin-top: 10px;
+}
+
+.para_align
+{
+	padding: 0 0 0 50px;
+}
+
+.list_align
+{
+	padding: 0 0 0 30px;
+}
+
+/*--------------------DMAD placement page(dmad_placement) , Placement default page, Development default page styles ends-------------------------------*/
+
+
+/*------------------------------Bitcode_team page style starts----------------------------------*/
+
+.FullWidthContainerTeam
+{
+	width: 590px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 0px;
+}
+
+.FactsTeam
+{
+	padding-top: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 590px;
+	margin: 0 auto;
+}
+
+.FactsTeam .container h2
+{
+	color: #9CB12D;
+}
+
+.FactsTeam .container .highlight
+{
+	width: 100%;
+	float: left;
+	text-align: left;
+	margin-right: 0px;
+}
+.FactsTeam .container .highlight .h2 li
+{
+	list-style-type: none;
+	padding: 0 0 0 45px;
+	position: relative;
+	vertical-align: middle;
+	font-size: 18px;
+}
+.FactsTeam .container .highlight .h2 li:before
+{
+	/*fill it with a blank space*/
+	content: "\00a0"; /*make it a block element*/
+	display: block; /*adding an 8px round border to a 0x0 element creates an 8px circle*/
+	border: solid 12px #C31212;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	height: 0;
+	width: 0; /*Now position it on the left of the list item, and center it vertically 	(so that it will work with multiple line list-items)*/
+	position: absolute;
+	left: 7px;
+	top: 40%;
+	margin-top: -8px;
+}
+
+.FactsTeam .container .highlight .h2 li:after
+{
+	/*Add another block-level blank space*/
+	content: "\00a0";
+	display: block; /*Make it a small rectangle so the border will create an L-shape*/
+	width: 4px;
+	height: 7px; /*Add a white border on the bottom and left, creating that 'L' */
+	border: solid #fff;
+	border-width: 0 3px 3px 0; /*Position it on top of the circle*/
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	margin-top: -4px; /*Rotate the L 45 degrees to turn it into a checkmark*/
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+/* End generating circles*/
+.FactsTeam .container .highlight p
+{
+	padding-left: 45px;
+}
+
+/*------------------------------Bitcode_team page style ends----------------------------------*/
+
+/*--------------------Android and iPhone Application page styles starts-------------------*/
+
+.FullWidthContainer_app
+{
+	width: 590px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 0px;
+}
+.Facts_app
+{
+	width: 590px; /*margin: 0 auto;*/
+}
+.Facts_app .container h2
+{
+	color: #9CB12D;
+}
+.Facts_app .container .highlight
+{
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+.Facts_app .container .highlight .h2 li
+{
+	list-style-type: none;
+	padding: 0 0 0 40px;
+	position: relative;
+	vertical-align: middle;
+}
+.Facts_app .container .highlight .h2 li a
+{
+	color: #c31212;
+	font-size: 16px;
+}
+.Facts_app .container .highlight .h2 li:before
+{
+	/*fill it with a blank space*/
+	content: "\00a0"; /*make it a block element*/
+	display: block; /*adding an 8px round border to a 0x0 element creates an 8px circle*/
+	border: solid 12px #C31212;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	height: 0;
+	width: 0; /*Now position it on the left of the list item, and center it vertically 	(so that it will work with multiple line list-items)*/
+	position: absolute;
+	left: 7px;
+	top: 40%;
+	margin-top: -8px;
+}
+.Facts_app .container .highlight .h2 li:after
+{
+	/*Add another block-level blank space*/
+	content: "\00a0";
+	display: block; /*Make it a small rectangle so the border will create an L-shape*/
+	width: 4px;
+	height: 7px; /*Add a white border on the bottom and left, creating that 'L' */
+	border: solid #fff;
+	border-width: 0 3px 3px 0; /*Position it on top of the circle*/
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	margin-top: -4px; /*Rotate the L 45 degrees to turn it into a checkmark*/
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+/* End generating circles*/
+.imgarea
+{
+	float: left;
+	width: 10%;
+	height: auto;
+	padding-left: 40px;
+	padding-top: 5px;
+}
+.imgarea img
+{
+	width: 50px;
+	height: 50px;
+	margin-top: 0px;
+	border: solid 1px #ccc;
+}
+.appspara
+{
+	float: right;
+	width: 80%;
+	font-size: 12px;
+	color: #000;
+	line-height: 20px;
+}
+
+/*--------------------Android and iPhone Application page styles ends--------------------*/
+
+/*---------------Why_learn_at_bitcode.aspx, bitcode_profile.aspx page style starts---------------------------*/
+.page_heading
+{
+	font-size: 20px;
+	color: #C31212;
+	font-weight: normal;
+}
+
+.profile_title a
+{
+	font-size: 20px;
+	color: #C31212;
+	float: right;
+	text-decoration: underline;
+}
+
+/*---------------Why_learn_at_bitcode.aspx bitcode_profile.aspx page style ends---------------------------*/
+
+/*-------------------------Testimonials Style  Start----------------------------------------------------------*/
+
+.test_panel_style
+{
+	/*margin-left: -50px;*/
+}
+/*-------------------------Testimonials Style  Ends----------------------------------------------------------*/
+/*----------------------------itcourses.aspx , corporate technologies offered page(corporate_technologies_offered.aspx) page style start----------*/
+.tech_bold
+{
+	font-size: 18px;
+	font-weight: bold;
+	height: 40px;
+	background: #FAFAFA;
+	text-indent: 10px;
+}
+
+.table_courses
+{
+	width: 100%;
+}
+
+.table_courses td a
+{
+	margin-left: 12px;
+}
+
+/*----------------------------itcourses.aspx , corporate technologies offered page(corporate_technologies_offered.aspx) page style end----------*/
+
+
+/**----schedule page style starts---------------**/
+
+
+table.scheduletable
+{
+	float: left; /*width: 800px;*/
+	width: 95%;
+	text-align: left;
+	margin-right: 10px;
+	margin-top: 10px;
+	border-color: #ccc;
+	font-size: 14px;
+	color: #333333;
+	background: rgba(255, 255, 255, 0.9);
+}
+table.scheduletable th
+{
+	text-align: center;
+	border-width: 1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: #ccc; /*background-color: #dedede;*/
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ccc), color-stop(1, #bbb) );
+	background: -moz-linear-gradient(#ccc, #bbb);
+}
+table.scheduletable td
+{
+	text-align: left;
+	border-width: 1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: #ccc; /*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ccc), color-stop(1, #dedede) );*/
+}
+
+/**---------schedule page style ends---------**/
+
+/**--------------schedule page pop styles starts-----------------------**/
+
+table.popuptable
+{
+	vertical-align: middle;
+	width: 100%;
+	text-align: left;
+	border-color: #ccc;
+	font-size: 14px;
+	color: #333333;
+	padding: 5px 5px 5px 5px;
+	border-style: double;
+	border-width: 5px;
+	border-color: #ccc;
+	background-color: White;
+}
+
+table.popuptable td
+{
+	/*border:1px solid #000;*/
+}
+
+.field_names
+{
+	width: 100px;
+	height: 15px; /*padding-bottom:10px;*/
+}
+
+.fields_text_box
+{
+	/*display: block;*/ /*padding:3px;*/ /* padding-top:0px;*/
+	outline: none;
+	height: 15px;
+	width: 150px;
+	border: 3px solid #ebe6e2;
+	border-radius: 5px;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+
+.fields_text_box:hover
+{
+	border-color: #CCC;
+}
+
+.fields_text_box:focus
+{
+	border: thick 4px #737660;
+	box-shadow: 2px 2px 8px 8px #ccc;
+}
+input[type="checkbox"]
+{
+	margin: 3px 3px 0px 3px;
+}
+
+/**-------------- schedule page pop styles ends-----------------------**/
+/*---------------Internship page style starts -----------------------------*/
+
+.FullWidthContainer_Internship
+{
+	width: 95%;
+	float: left;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.FullWidthContainer_Internship .container .highlight
+{
+	background: #F8F7F7;
+	width: 95%;
+	float: left;
+	text-align: left;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	border: 1px solid #DDD;
+}
+
+.FullWidthContainer_Internship .container .highlight p
+{
+	margin-left: 10px;
+}
+
+/*---------------Internship page style ends -----------------------------*/
+/*----------------------- Internship page table style starts------------------------- */
+#internship_table_border td
+{
+	border: solid 1px #ccc; /*padding-top:5px; 	padding-bottom:5px;*/ /*padding: 3px 0px 3px 0px;*/
+	padding: 13px 13px 13px 13px;
+}
+
+#internship_table_border td a
+{
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+#internship_table_border td a img
+{
+	width: 60px;
+	height: 60px;
+}
+
+
+/*------------------------ Internship page table style ends-------------------------- */
+
+/*-------------------Relocation Styles ---*/
+.relocation_outer_container
+{
+	width: 100%;
+}
+
+.reloction_inner_container
+{
+	width:100%;
+	margin: 20px 20px 20px 20px; 
+	border: 1px solid #000;
+}
+
+.relocation_heading_div
+{
+	
+	font-size: 36px;
+	color: #C31212;
+	line-height: 30px;
+	vertical-align: middle;
+	padding: 10px 0px 5px 0px;
+}
+.relocation_title_div
+{
+	font-size: 30px;
+	color: #C31212;
+	
+	margin-top: 10px;
+	display: inline-block;
+	padding: 5px 0px 5px 0px;
+	/*text-decoration: underline;*/
+	border-bottom: 1px solid #c31212;
+	
+}
+
+.relocation_text_div
+{
+	margin-top: 10px;
+	font-size: 22px;
+	line-height: 30px;
+	vertical-align: middle;
+	padding: 10px 0px 20px 0px;
+	margin-bottom: 10px;
+	
+}
+.relocation_panel
+{
+	background:white;
+	border: 1px solid #ccc;
+}

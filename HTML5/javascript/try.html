@@ -1,0 +1,32 @@
+<html>
+<body>
+	<input type="button" value="click" onclick="myfun()">
+	<script type="text/javascript">
+
+	function myfun()
+	{
+		var a=100;
+		var b=0;
+		try
+		{
+			if(b==0)
+			{
+				throw("Divide by zero");
+			}
+			
+			else
+			{
+				var c=a/b;
+			}
+			
+			}
+			catch(e)
+			{
+			alert("Error"+e);
+		}
+		
+	}
+	</script>
+
+	</body>
+</html>

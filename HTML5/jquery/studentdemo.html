@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+	var x=$("#sel").val();
+	//alert(x);
+	var str={'rollno':x};
+//
+$.get("studentdemo.php",str,function(data,status)
+{
+	//alert(status);
+	//alert(data);
+	var arr=jQuery.parseJSON(data);
+	var str1="<table border=2><tr><td>rollno</td><td>name</td><td>marks</td></tr>";
+	var str=" ";
+	$.each(arr,function(k,v)
+	  {
+       str+="<tr><td>"+v.rollno+"</td><td>"+v.name+"</td><td>"+v.marks+"</td></tr>";
+	   $("div").html(str1+str);
+
+      })
+})
+})
+})
+</script>
+</head>
+<body>
+<form>
+<select id="sel">
+	<option value="1">pooja</option>
+	<option value="2">chetana</option>
+	<option value="3">rohan</option>
+	<option value="4">pq</option>
+	<option value="5">D</option>
+</select>
+</form>
+<div id="d1"></div>
+<input type="button" value="click" id="btn1">
+</body>
+</html>

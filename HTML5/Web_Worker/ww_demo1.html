@@ -1,0 +1,37 @@
+<html>
+<body>
+	<input type="button" id="btn1" value="Send Message"></input>
+	<div id="d1"></div>
+	<script>
+	var d1=document.getElementById('d1');
+	var btn1=document.getElementById('btn1');
+
+	var w=new Worker("demo_ww.js");
+
+	window.addEventListener("load",init,true);
+    btn1.addEventListener("click",setmessage,true);
+	w.addEventListener("message",getmessage,true);
+
+	 function init()
+	 {
+	 	if(typeof(Worker)!=="undefined")
+	 	{
+	 		d1.innerHTML+="Your browser support web worker";
+	 	}
+	 	else
+	 	{
+	 		d1.innerHTML+="Your browser does not support";
+	 	}
+	 }
+	 function setmessage()
+	 {
+	 	w.postMessage("Hello");
+	 }
+	 function getmessage(event)
+	 {
+	 	d1.innerHTML=event.data;
+	 }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<body>
+<div id="d1"></div>
+<script>
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.onreadystatechange=function()
+{
+	if (xmlHttp.readyState==4 && xmlHttp.status==200)
+	{
+		myFunction(xmlHttp.responseText);
+		//alert(responseText);
+	}
+}
+xmlHttp.open("GET","db_json1.php",true);
+xmlHttp.send();
+function myFunction(str)
+{
+	var arr=JSON.parse(str);
+	//alert(arr);
+	var str1="<table border=1>";
+	for(var i=0;i<arr.length;i++)
+	{
+	str1+="<tr><td>"+arr[i].rollno+"</td><td>"+arr[i].name+"</td><td>"+arr[i].marks+"</td></tr>";
+	}
+	 str1+="</table>";
+	document.getElementById('d1').innerHTML=str1;
+}
+</script>
+</body>
+</html>
+
+

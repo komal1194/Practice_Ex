@@ -1,0 +1,24 @@
+<html>
+<body>
+	<ul id="list">
+		<li>Red</li>
+		<li>Blue</li>
+		<li>Green</li>
+		<li>Yellow</li>
+	</ul>
+	<script src="utility.js"></script>
+	<script>
+	var list=document.getElementById('list');
+	EventUtil.addHandler(list,"click",fun1);
+	function fun1(event)
+	{
+		 var x=event.target.innerHTML;
+		 alert(x);
+		 document.cookie="color="+x+";Expires Mon, 13 Jun 2017 00:00:01;";
+	}
+
+	</script>
+
+
+</body>	
+</html>

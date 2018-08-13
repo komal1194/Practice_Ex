@@ -1,0 +1,26 @@
+<html>
+<head></head>
+	<body>
+		Enter Number:<input type="number" id="txtrange" min="10" max="50"/>
+		<br>
+		<input type="button" value="check" onclick="fun()"/>
+		<script type="text/javascript">
+		function fun()
+		{
+		var txtrange=document.getElementById('txtrange');
+		if(txtrange.validity.rangeUnderflow)
+		{
+			alert("This is below the range")
+		}
+		else if(txtrange.validity.rangeOverflow)
+		{
+			alert("This is over the range")
+		}
+		else
+		{
+			alert("Input is OK");
+		}
+}
+</script>
+</body>
+<html>

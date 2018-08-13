@@ -1,0 +1,46 @@
+<html>
+	<body>
+		<table border=1 id="t1">
+			<tr>
+				<td> 1 </td>
+				<td> A </td>
+				<td> 70 </td>
+			</tr>
+			<tr>
+				<td> 2 </td>
+				<td> B </td>
+				<td> 80 </td>
+			</tr>
+			<tr>
+				<td> 3 </td>
+				<td> C </td>
+				<td> 90 </td>
+			</tr>
+		</table>
+		
+		<script src="utility.js"></script>
+		<script>
+				var t1=document.getElementById('t1');
+
+				EventUtil.addHandler(t1,"click",fun1);
+				function fun1(event)
+				{
+					
+					var x=event.target.innerHTML;
+					var str=prompt("Add a value:");
+					
+					
+					if(str==null)
+					{
+						
+						event.target.innerHTML=x;
+					}
+					else
+					{
+						event.target.innerHTML=str;
+					}
+				}
+			
+		</script>
+	</body>
+</html>

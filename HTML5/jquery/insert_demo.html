@@ -1,0 +1,59 @@
+<html>
+<head>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$.get("display.php",function(data,status)
+{
+	var arr=jQuery.parseJSON(data);
+	var str=" ";
+	var str1="<table border=2><tr><td>rollno</td><td>name</td><td>marks</td></tr>";
+	$.each(arr,function(k,v){
+		str+="<tr><td>"+v.rollno+"</td><td>"+v.name+"</td><td>"
+		+v.marks+"</td></tr>";
+
+		})
+	$("div").html(str1+str);
+})	
+})
+
+$("#btn2").click(function(){
+	var rollno=$("#rollno").val();
+	var name=$("#name").val();
+	var marks=$("#marks").val();
+	var str={'rollno':rollno,'name':name,'marks':marks};
+$.get("insert_demo.php",str,function(data,status)
+{
+		
+	var arr=jQuery.parseJSON(data);
+	var str=" ";
+	var str1="<table border=2><tr><td>rollno</td><td>name</td><td>marks</td></tr>";
+	$.each(arr,function(k,v){
+		str+="<tr><td>"+v.rollno+"</td><td>"+v.name+"</td><td>"
+		+v.marks+"</td></tr>";
+
+		})
+	$("div").html(str1+str);
+})	
+})
+
+})
+</script>	
+	</head>
+<div id="d"></div><br><br>
+	<body>
+		<form>
+		Enter RollNo:<input type="text" name="rollno"><br><br>
+		Enter Name:<input type="text" name="name"><br><br>
+		Enter Marks:<input type="text" name="marks"><br><br>
+		<input type="button" value="display" name="display" id="btn1">&nbsp
+		<input type="submit" value="insert" name="insert" id="btn2">&nbsp
+		<input type="submit" value="update" name="update" id="btn3">&nbsp
+		<input type="submit" value="delete" name="delete" id="btn4">&nbsp
+</form>	
+
+
+
+	</body>
+</html>

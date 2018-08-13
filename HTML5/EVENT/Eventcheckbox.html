@@ -1,0 +1,47 @@
+<html>
+<body id="d1">
+
+<input type="checkbox" id="c1" value="red">red</input>
+<input type="checkbox"id="c2" value="pink">pink</input>
+<input type="checkbox"id="c3"value="blue">blue</input>
+<input type="checkbox"id="c4"value="black">black</input>
+<input type="checkbox"id="c5"value="green">green</input>
+
+<script src="utility.js">
+</script>
+
+<script>
+var d1=document.getElementById('d1');
+
+EventUtil.addHandler(d1, "click",fun1);
+
+function fun1(event)
+{
+var a=event.target.id;
+
+switch(a)
+{
+case"c1":d1.style.backgroundColor="red";
+break;
+
+
+case"c2":d1.style.backgroundColor="pink";
+oobreak;
+
+case"c3":d1.style.backgroundColor="blue";
+break;
+
+case"c4":d1.style.backgroundColor="black";
+break;
+
+case"c5":d1.style.backgroundColor="green";
+break;
+
+
+
+}
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+		div#box
+		{
+			width: 300px;
+			height: 200px;
+		
+			padding: 40px;
+			background:skyblue;
+			border: 10px blue dotted; 
+			border-color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="box">
+	This is my div
+	</div>
+	<input type="radio" name="box" value="border_box" onclick=fun('border')>Border-box</input>
+	<input type="radio" name="box" value="padding" onclick=fun('padding')>Padding-box</input>
+	<input type="radio" name="box" value="content" onclick=fun('content')>Content-box</input>
+
+<script type="text/javascript">
+	function fun(myradio)
+	{
+		var dv=document.getElementById('box');
+		if(myradio=='content')
+		{
+			dv.style.backgroundClip="content-box";
+		}
+		if(myradio=='border')
+		{
+			dv.style.backgroundClip="border-box";
+		}
+		if(myradio=='padding')
+		{
+			dv.style.backgroundClip="padding-box";
+		}
+	}
+</script>
+</body>
+</html>

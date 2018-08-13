@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="jquery-1.11.3.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			var arr=[1,2,3,4];
+			var product=1;
+			$.each(arr,function(key,value)
+			{
+				product*=value;
+			})
+			$("#d1").html("Product="+product);
+		})
+	</script>
+</head>
+<body>
+<div id="d1"></div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+div,img{
+	height:200px;
+	width:200px;
+	border:1px red solid;
+	float: left;
+}
+</style>
+</head>
+<body>
+<div ondragover=dragoverHandler(event) ondrop=dropHandler(event)>
+	
+	<ul>
+		<li id="l1" ondragstart=startHandler(event) draggable="True">HTML</li>
+		<li id="l2" ondragstart=startHandler(event) draggable="True">PHP</li>
+		<li id="l3" ondragstart=startHandler(event) draggable="True">java</li>
+	</ul>
+</div>
+<div id="d1" ondragover=dragoverHandler(event) ondrop=dropHandler(event)>
+	</div>
+	<div id="d2" ondragover=drag(event) ondrop=drop(event)>
+	</div>
+	<script>
+	function startHandler(event)
+	{
+		event.dataTransfer.setData("text/plain",event.target.id);
+
+	}
+	function dragoverHandler(event)
+	{
+		event.preventDefault();
+
+	}
+	function dropHandler(event)
+	{
+		event.preventDefault();
+		var data=event.dataTransfer.getData("text/plain");
+		event.target.appendChild(document.getElementById(data));
+
+	}
+	function drag(event)
+	{
+		event.preventDefault();
+		/*var data1=event.dataTransfer.getData("text/plain");
+		event.target.appendChild(document.getElementById(data1));
+*/	}
+
+
+
+	function drop(event)
+	{
+		event.preventDefault();
+		var data=event.dataTransfer.getData("text/plain");
+		event.target.innerHTML+="<br>"+data;
+
+	}
+
+		
+	</script>
+</body>
+</html>

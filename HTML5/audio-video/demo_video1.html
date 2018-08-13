@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<style type="text/css">
+div
+{
+/*height:300px;
+width:300px;
+*/}
+</style></head> 
+<body> 
+<div> 
+  <video id="video1">
+  <source src="mov_bbb.ogg"></video>
+    <br><br>
+  <input type="button" value="Play/Pause" onclick="playPause()"></input> 
+  <input type="button" value="Big" onclick="makeBig()"></input>
+  <input type="button" value="Small" onclick="makeSmall()"></input>
+  <input type="button" value="Normal"onclick="makeNormal()"></input>
+  
+  </div> 
+
+<script> 
+var Video = document.getElementById("video1"); 
+
+function playPause() { 
+    if (Video.paused) 
+        Video.play(); 
+    else 
+        Video.pause(); 
+} 
+
+function makeBig() { 
+    Video.width = 800; 
+} 
+
+function makeSmall() { 
+    Video.width = 200; 
+} 
+
+function makeNormal() { 
+    Video.width = 500; 
+} 
+</script> 
+
+</body> 
+</html>

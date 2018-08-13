@@ -1,0 +1,26 @@
+<html>
+<body>
+
+<input type="button" value="Attach handler" id="btn1">
+<input type="button" value="Remove handler" id="btn2">
+
+<script>
+var btn1=document.getElementById("btn1");
+var btn2=document.getElementById("btn2");
+
+btn1.addEventListener("click",fun1,false);
+btn2.addEventListener("click",fun2,false);
+
+function fun1()
+{
+	alert("this is clicked");
+}
+
+function fun2()
+{
+	btn1.removeEventListener("click",fun1,false);
+	alert("remove");
+}
+</script>
+</body>
+</html>

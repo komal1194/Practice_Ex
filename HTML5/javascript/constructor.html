@@ -1,0 +1,27 @@
+<html>
+<body>
+	<script>
+	var personconstructor=function(name,age,state)
+	{
+		var person={};
+		this.name=name;
+		this.age=age;
+		this.state=state;
+		this.sayName=function()
+		{
+			alert(name+""+age+""+state);
+
+		};
+		
+	}
+	var person1=new personconstructor("Komal","23","Maharashtra");
+	var person2=new personconstructor("Pooja","25","Maharashtra");
+	person1.sayName();
+	person2.sayName();
+	alert(person1.sayName==person2.sayName);//false
+	//alert(person1.constructor==person2.constructor); /true
+	//alert(person1.instance of object);//false
+	</script>
+
+</body>
+</html>

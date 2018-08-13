@@ -1,0 +1,27 @@
+<html>
+<head>
+	<style>
+.divstyle{
+	height:200px;
+	width:200px;
+	border:1px solid black;
+}
+
+</style>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+$("div").attr("class","divstyle");
+$("div").css({"background-color":'red',"color":"white"});
+var x=$("div").css("background-color");
+alert(x);
+})
+})
+</script>
+</head>
+<body>
+<div>This is mydiv</div><br>
+<input type="button" value="click" id="btn1">
+</body>
+</html>

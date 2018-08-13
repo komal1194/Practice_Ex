@@ -1,0 +1,68 @@
+<html>
+<body>
+<form id="form1">
+	Enter ItemName:<input type="text" id="txtnm"><br><br>
+	Enter Value:<input type="text" id="txtval"><br><br>
+	<input type="button" value="ADD" onclick="storeList()">
+	<input type="button" value="update" onclick="updateList()">
+	<input type="button" value="delete" onclick="deleteList()">
+	<input type="button" value="clear" onclick="clearList()">
+	<div id="d"></div>
+
+</form>
+
+	<script type="text/javascript">
+	show();
+	d=document.getElementById('d');
+	function storeList()
+	 {
+		var txtnm=document.getElementById("txtnm").value;
+		var txtval=document.getElementById("txtval").value;
+		alert(txtnm);
+		localStorage.setItem(txtnm,txtval);
+		show();
+
+	}
+	function show()
+	{
+		var str=" ";
+		for(i=0;i<localStorage.length;i++)
+		{
+str+="<li onclick=display(event)>"+localStorage.key(i)+" "+localStorage.getItem(localStorage.key(i))+"</li>"
+;
+
+		}
+		d.innerHTML="<ul>"+str+"</ul>"
+	}
+	function display(event)
+	{
+		var strname=event.target.innerHTML;
+		var splitstr=strname.split(" ");
+		txtnm.value=splitstr[0];
+		txtval.value=splitstr[1];
+	}
+	function updateList()
+	{
+		storeList();
+	}
+	function deleteList()
+	{
+	localStorage.removeItem(txtnm.value);
+	show();	
+	}
+	function clearList()
+	{
+		var re=confirm("Are you sure want to clear?");
+		if(re==true)
+		{
+			localStorage.clear();
+			show();
+		}
+		else
+		{
+			show();
+		}
+	}
+</script>
+</body>
+</html>

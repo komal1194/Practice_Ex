@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html ng-app='myapp'>
+<head>
+	<title>welcome</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<style type="text/css">
+		#mydiv
+		{
+			height:80px;
+			width:200px;
+			align-content: left;
+			padding: 0px;
+			display: flex;
+		}
+	</style>
+	<script src="jquery-1.11.3.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="angular.min.js"></script>
+</head>
+<body ng-controller='mainctrl'>
+<center>
+	<br>
+	<div id="mydiv">
+		<table border="2">
+		<tr>
+			<td>bookid</td>
+			<td>author</td>
+			<td>status</td>
+
+		</tr>
+		<tr ng-repeat="x in record" ng-click=addtxtrecord($event) 
+		data-toggle="modal" data-target="#updatemodal">
+			<td>{{x.bookid}}</td>
+			<td>{{x.author}}</td>
+			<td>{{x.status}}</td>
+			<td><input type="checkbox" ng-checked={{x.status}}></td>
+
+		</tr>
+	</table>
+	<span><input type="button" value="add" id="plus" data-toggle="modal" data-target="#addmodal"></img></span>
+	<br>
+	</div>
+</center>
+<div id="addmodal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button class="close" data-dismiss="modal">&times;</button>
+				Enter bookid.<input type="text" ng-model="txt1"><br><br>
+				Enter author:<input type="text" ng-model="txt2"><br><br>
+				Enter status:<input type="text" ng-model="txt3"><br><br>
+				<input type="button" value="add" data-dismiss="modal" ng-click=addRecord()>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="updatemodal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button class="close" data-dismiss="modal" ng-click=clearTxt()>&times;</button>
+				Enter bookid:<input type="text" ng-model="txt1"><br><br>
+				Enter author:<input type="text" ng-model="txt2"><br><br>
+				Enter status:<input type="text" ng-model="txt3"><br><br>
+				<input type="button" value="update" data-dismiss="modal" ng-click=updateRecord()>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var app=angular.module('myapp',[]);
+	app.controller('mainctrl',function($scope,$http)
+		{
+			$http.get("fetch_record.php").then(function(response)
+				{
+					$scope.record=response.data;
+				});
+
+			$scope.addRecord=function()
+			{
+				var str={
+							"bookid":$scope.txt1,
+							"author":$scope.txt2,
+							"status":$scope.txt3};
+				$http.post("addRecord.php",str,function(){});
+				$scope.txt1="";
+				$scope.txt2="";
+				$scope.txt3="";
+				$http.get("fetch_record.php").then(function(response)
+						{
+							$scope.record=response.data;
+						});
+			}
+
+			$scope.clearTxt=function()
+			{
+				$scope.txt1="";
+				$scope.txt2="";
+				$scope.txt3="";
+			}
+
+			$scope.addtxtrecord=function(event)
+			{
+				var data=event.currentTarget.children;
+				$scope.txt1=data[0].innerHTML;
+				$scope.txt2=data[1].innerHTML;
+				$scope.txt3=data[2].innerHTML;
+			}
+
+			$scope.updateRecord=function()
+			{
+				var str={
+							"bookid":$scope.txt1,
+							"author":$scope.txt2,
+							"status":$scope.txt3
+						};
+				$http.post("update_record.php",str,function(){});
+				$scope.txt1="";
+				$scope.txt2="";
+				$scope.txt3="";
+				$http.get("fetch_record.php").then(function(response)
+						{
+							$scope.record=response.data;
+						});
+				
+			}
+		
+		});
+</script>
+</body>
+</html>

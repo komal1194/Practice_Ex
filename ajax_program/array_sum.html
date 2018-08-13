@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>welcome</title>
+	<script src="jquery-1.11.3.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			var arr=[10,20,30,40,50];
+			var sum=0;
+			$.each(arr,function(key,value)
+			{
+				sum+=value;
+			})
+			$("#d1").html("sum="+sum);
+		})
+</script>
+</head>
+<body>
+<div id="d1"></div>
+</body>
+</html>

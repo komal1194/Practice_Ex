@@ -1,0 +1,64 @@
+<html>
+<head>
+	<style type="text/css">
+	div #box
+	{
+		height: 200px;
+		width: 200px;
+		border:2px dotted blue;
+		margin: 10px;
+		padding: 5px;
+		background-color: skyblue;
+		/*background-clip:padding-box;
+		background-clip: content-box;
+/*		background-clip: border-box;
+*/
+	}
+	</style>
+</head>
+<body>
+	<div id="box">this  is my div
+</div>
+
+	<input type="radio" value="border-box"name="box" id="r1"
+	onclick="fun"('border')>Border-box
+	</input>
+	<input type="radio" value="content-box" name="box" id="r2"
+	onclick="fun"('content')>Content-box
+	</input>
+	<input type="radio" value="padding-box" name="box" id="r3"
+	onclcik="fun"('padding')>Padding-box
+	</input>
+
+
+<script>
+var d=document.getElementById('box');
+function fun(myradio)
+{
+	if(myradio=="border")
+	{
+		d1.style.background-clip="border-box";
+	}
+	
+	
+		if(myradio==content)
+		{
+			d1.style.background-clip="content-box";
+
+		}
+		else
+		{
+			if (myradio==padding) 
+			{
+				d1.style.background-clip="padding-box";
+			}
+		}
+	
+}
+
+</script>
+
+	
+
+</body>
+</html>

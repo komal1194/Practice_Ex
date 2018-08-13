@@ -1,0 +1,44 @@
+<html>
+<body>
+<form method="get" action="studentdemo.php">
+	<select id="sel" name="name">
+		<option>pooja</option>
+		<option>abc</option>
+		<option>pqr</option>
+	</select>
+	<input type="submit" value="display" onclick="fun()">
+
+</form>
+<script>
+function fun()
+{
+	var name=document.getElementById('sel').value;
+	alert(name);
+	var xmlHttp=new XMLHttpRequest();
+
+xmlHttp.onreadystatechange=function()
+{
+	if(xmlHttp.readyState==4 && xmlHttp.status==200)
+	{
+		myfunction(xmlHttp.responseText);
+	}
+}
+
+xmlHttp.open("GET","studentdemo.php?name="+sel,true);
+xmlHttp.send();
+}
+function myfunction(str)
+{
+	var arr=JSON.parse(str);
+	var str1="<table border=1>";
+	for(var i=0;i<arr.length;i++)
+	{
+		str1+="<tr><td>"+arr[i].rollno+"</td><td>"+arr[i].name+"</td><td>"+arr[i].marks+"</td></tr>";
+	}
+	str1+="</table>";
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+<head>
+<script src="utility.js"></script>
+<script>
+var d1;
+EventUtil.addHandler(window,"load",initcomp);
+function initcomp()
+{
+	//d1=document.getElementById("d");
+	list=document.getElementById("list");
+	EventUtil.addHandler(list,"click",show);
+
+	btn1=document.getElementById("btn1");
+	btn2=document.getElementById("btn2");
+	btn3=document.getElementById("btn3");
+
+	EventUtil.addHandler(btn1,"click",addList);
+	EventUtil.addHandler(btn2,"click",updateList);
+	EventUtil.addHandler(btn3,"click",deleteList);
+}
+var arr=new Array();
+function shopping(x,y)
+{
+	this.txtname=x;
+	this.txtqty=y;
+}
+function addList()
+{
+	var txtname=document.form1.txtname.value;
+	var txtqty=document.form1.txtqty.value;
+	var obj=new shopping(txtname,txtqty);
+	arr.push(obj);
+	display();
+}
+	function display()
+	{
+		var str="";
+		for(i=0;i<arr.length;i++)
+		{
+			//str+="<li onclick=show(event)>"+arr[i].txtname+"*"+arr[i].txtqty+"</li>"
+			str+="<li>"+arr[i].txtname+""+arr[i].txtqty+"</li>"
+		}
+		list.innerHTML=str;
+	}
+	function show(event)
+	{
+		var str=event.target.innerHTML;
+		strArr=str.split(" ");
+		document.form1.txtname.value=strArr[0];
+		document.form1.txtqty.value=strArr[1];
+	}
+	function updateList()
+	{
+		for(i=0;i<arr.length;i++)
+	{
+		if(arr[i].txtname==document.form1.txtname.value)
+		{
+			arr[i].txtqty=document.form1.txtqty.value;
+		}
+	}
+	display();
+}
+function deleteList()
+{
+for(i=0;i<arr.length;i++)
+	{
+		if(arr[i].txtname==document.form1.txtname.value)
+		{
+			arr.splice(i,1);
+		}
+	}
+	display();
+}
+</script></head>
+<body>
+	<form name="form1">
+		 Enter Name:<input type="text" id="txtname"/><br><br>
+		Enter Qty:<input type="text" id="txtqty"/><br><br>
+	<input type="button" id="btn1" value="add">
+	<input type="button" id="btn2" value="update">
+	<input type="button"id="btn3" value="delete">
+
+</form>
+<ul id="list"></ul>
+</body>
+</html>

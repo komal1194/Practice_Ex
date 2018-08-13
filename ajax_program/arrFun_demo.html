@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>welcome</title>
+	<script src="jquery-1.11.3.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			var arr=[
+						{
+							name:"a",
+							qty:1
+						},
+						{
+							name:"b",
+							qty:2
+						},
+						{
+							name:"c",
+							qty:3
+						}
+					];
+			arr.push({"name":"d","qty":"100"});
+			$.fn.show=function()
+			{
+				var str="";
+				$.each(arr,function(key,value)
+				{
+					str+="<li>"+value.name+"*"+value.qty+"</li>";
+					$("#d1").html(str);
+				})
+			}
+			$.fn.show();
+		})
+	</script>
+</head>
+<body>
+<div id="d1"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<body>
+<img src=" " height="200px" width="200px" id="image"><br><br>
+<input type="button" value="start" onclick="start()">
+<input type="button" value="fast" onclick="fast()">
+<input type="button" value="slow" onclick="slow()">
+<input type="button" value="stop" onclick="stop()">
+<script>
+var i=0;
+function img()
+{
+	var imag=["Lighthouse.jpg","Tulips.jpg","Lighthouse.jpg","Koala.jpg"];
+	image.src=imag[i];
+	i++;
+	if(i==imag.length)
+	{
+		i=0;
+	}
+}
+function start()
+{
+	x=window.setInterval("img()",400);
+	
+
+}
+function fast()
+{
+	clearInterval(x);
+	x=window.setInterval("img()",100);
+
+}
+function slow()
+{
+	clearInterval(x);
+	x=window.setInterval("img()",500);
+	
+}
+function stop()
+{
+	clearInterval(x);
+}
+</script>
+</body>
+</html>

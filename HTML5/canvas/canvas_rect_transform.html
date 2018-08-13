@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+canvas
+{
+	height: 300px;
+	width: 300px;
+	border: 1px black solid;
+}
+</style>
+</head>
+<body>
+	
+	<canvas id="c1"></canvas>
+	<script type="text/javascript">
+	var c1=document.getElementById('c1');
+	var ctx=c1.getContext("2d");
+
+	ctx.fillStyle="yellow";
+	ctx.fillRect(0,0,250,100);
+	ctx.transform(1,0.1,-0.9,1,45,10);
+
+	ctx.fillStyle="red";
+	ctx.fillRect(0,0,200,100);
+	ctx.transform(1.2,0.1,-0.5,1.6,20,10);
+
+	ctx.fillStyle="blue";
+	ctx.fillRect(0,0,210,90);
+
+
+
+	
+
+	</script>
+</body>
+</html>

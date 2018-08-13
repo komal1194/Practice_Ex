@@ -1,0 +1,82 @@
+<html>
+<head>
+	<style>
+	div{
+		height:200px;
+		width:200px;
+		border:2px red solid;
+		}
+		</style>
+</head>
+<body>
+<div id="d1">This is my div</div>
+
+<br><br>
+<select id="bcolor">
+<option>color</option>
+<option>blue</option>
+<option>red</option>
+<option>green</option>
+</select>
+<br>
+<select id="bcolor1">
+<option>color</option>
+<option>blue</option>
+<option>red</option>
+<option>green</option>
+</select>
+<br><br>
+
+<input type="button" value="click" onclick="getColor()"></input>
+<script>
+function getColor()
+{
+	var choiceColor=document.getElementById('bcolor').value;
+	var choiceColor1=document.getElementById('bcolor1').value;
+	alert(choiceColor);
+	document.cookie="color="+choiceColor+";expires=tue,28 dec 2020 10:00:00";
+document.cookie="color1="+choiceColor1+";expires=tue,28 dec 2020 10:00:00";
+var color=getCookieValue('color');
+var color1=getCookieValue('color1');
+d1.style.backgroundColor=color;
+d1.style.color=color1;
+
+}
+
+
+function getCookieValue(cookieName) 
+{
+	var cookieValue=document.cookie;
+	alert(cookieValue);
+	var cookieStartsAt=cookieValue.indexOf(" "+cookieName+"=");
+	if(cookieStartsAt==-1)
+	{
+		cookieStartsAt=cookieValue.indexOf(cookieName+"=");
+
+	}
+	if(cookieStartsAt==-1)
+	{
+		cookieValue=null;
+		
+	}
+	else{
+		//alert(cookieStartAt);
+		var cookieStartsAt=cookieValue.indexOf("=",cookieStartsAt)+1;
+
+		var cookieEndsAt=cookieValue.indexOf(";",cookieStartsAt);
+		if(cookieEndsAt==-1)
+		{
+			cookieEndsAt=cookieValue.length;
+		}
+		var str=unescape(cookieValue.substring(cookieStartsAt,cookieEndsAt));
+		alert(str);
+		//document.bgColor=str;
+
+			}
+
+return str;
+}
+
+</script>
+</body>
+</html>

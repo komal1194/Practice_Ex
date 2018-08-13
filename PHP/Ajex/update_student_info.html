@@ -1,0 +1,54 @@
+<html><body><form>
+<input type="button" value="display" onclick=display()><br><br>
+<div id="d1"></div>	
+Enter roll no:<input type="text" name="rollno"><br><br>
+Enter name:<input type="text" name="name"><br><br>
+Enter marks:<input type="text" name="marks"><br><br>
+<input type="button" value="Update" name="btnupdate" onclick=update()>
+</form>
+<script>
+function display()
+{	
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.onreadystatechange=function()
+{
+	if(xmlHttp.readyState==4 && xmlHttp.status==200)
+	{
+		myFunction(xmlHttp.responseText);
+	}
+}
+xmlHttp.open("GET","update_student_info.php",true);
+xmlHttp.send();
+}
+function myFunction(str)
+{
+	var arr=JSON.parse(str);
+	var str1="<table border=2>";
+	for(var i=0;i<arr.length;i++)
+	{
+	str1+="<tr><td>"+arr[i].rollno+"</td><td>"+arr[i].name+"</td><td>"+arr[i].marks+"</td><tr>";
+	}
+	str1+="</table>";
+	document.getElementById('d1').innerHTML=str1;
+}
+function update()
+{
+	/*var str1=document.getElementById('$rollno').innerHTML;
+	var str1=document.getElementById('$name').innerHTML;
+	var str1=document.getElementById('$marks').innerHTML;
+	*/
+	var xmlHttp1 = new XMLHttpRequest();
+	xmlHttp1.onreadystatechange=function()
+{
+	if(xmlHttp1.readyState==4 && xmlHttp1.status==200)
+	{
+		myFunction(xmlHttp1.responseText);
+	}
+}
+//xmlHttp1.open("GET","update_student_record.php?rollno="+$rollno&"name"=+$name&"marks="+$marks"+str1,true);
+xmlHttp1.send();
+}
+		
+</script>
+</body>
+</html>

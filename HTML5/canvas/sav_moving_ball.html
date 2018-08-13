@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	svg{
+		height: 300px;
+		width: 300px;
+		border: solid black 2px;
+}
+	circle
+	{
+		animation: move 2s linear infinite;
+	
+	}
+
+	@keyframes move
+{
+			0%{transform:  translate(0px,100px) scale(1,1);}
+			50%{transform: translate(140px,140px) scale(1,1);}
+			100%{transform: translate(200px,200px) scale(1,1);}
+			/*80%{transform: translate(020px,40px) scale(1,1);}
+			100%{transform: translate(200px,200px) scale(1,1);}		
+*/
+}	</style>
+	<svg>
+		<circle cx=60 cy=90 r=30 style="fill:red;stroke:black;stroke-width=30">
+			</circle>
+
+	</svg>
+</head>
+</html>

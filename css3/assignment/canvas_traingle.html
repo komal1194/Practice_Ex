@@ -1,0 +1,47 @@
+<html>
+<head>
+	<style>
+	#canvas1{
+		width: 300px;
+		height: 300px;
+		border: 2px solid red;
+	}
+	</style>
+	</head>
+<body>
+<canvas id="canvas1"></canvas>
+
+<script>
+var canvas1=document.getElementById('canvas1');
+var ctx=canvas1.getContext("2d");
+/*var grad=ctx.createLinearGradient(100,50,50,50);
+grad.addColorStop(0,"grey");
+grad.addColorStop(0.9,"white");
+grad.addColorStop(0.7,"purple");*/
+
+//triangle
+ctx.strokeStyle="red";
+ctx.lineWidth="2";
+ctx.fillStyle="yellow";
+ctx.moveTo(60,30);
+ctx.lineTo(9,150);
+ctx.lineTo(120,150);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+
+//triangle
+ctx.strokeStyle="brown";
+ctx.lineWidth="4";
+ctx.fillStyle="brown";
+ctx.moveTo(60,30);
+ctx.lineTo(90,160);
+ctx.lineTo(180,90);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+<body>
+
+<video id="video1">
+<source src="mov_bbb.ogg"></video>
+
+<script src="utility.js"></script>
+<script>
+var d1=document.getElementById('video1');
+EventUtil.addHandler(d1,"click",fun);
+EventUtil.addHandler(d1,"mouseover",fun);
+EventUtil.addHandler(d1,"mouseout",fun);
+function fun(event)
+{
+  if(event.type=="mouseover")
+  {
+    video1.play();
+    //alert("hi");
+  }
+  else if(event.type=="mouseout")
+  {
+    video1.pause();
+  }
+}
+</script>
+</script>
+</body>
+</html>

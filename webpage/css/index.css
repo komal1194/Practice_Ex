@@ -1,0 +1,208 @@
+@charset "utf-8";
+/* CSS Document */
+
+header{height:80px;
+       background-color:#04a5af;}
+	    
+		#logo{
+			height:60px;
+			margin-left:20px;
+			margin-right:20px;
+			margin-top:10px;
+			}
+		#head{
+		margin-top:25px;
+			
+			font:Berlin Sans FB;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+	float:right;
+			}
+			#head a{text-decoration:none;
+		font-size:15px;
+	
+	border-right:1px solid #FFF;
+
+	padding:0 10px;
+	color:#FFF;
+				}
+	   
+nav{
+	padding-left:110px;
+padding-top:20px;
+
+
+
+   }	
+	nav a{
+		padding-top:15px;
+		font-size:24px;
+		color:#5d7675;
+		text-decoration:none;
+		padding:0 15px;
+	
+	} 
+.main{height:566px;
+      background-color:#bdf6f9;
+	      cursor: auto;
+    font-family: "omnes-pro",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;} 
+	
+	#land{
+		height:565px;
+		width:630px;
+		margin-left:120px;
+		}
+		.hero-image{
+			width:60%;
+			float:left;}
+		.text-block{width:40%
+		float:left;
+		align-items: center;}
+h1 {
+    font-size: 2.75rem;
+}
+#h1{padding-top:150px;}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+
+
+    color: #555555;
+    font-family: "omnes-pro",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+       margin-bottom: 0.5rem;
+    margin-top: 0.2rem;
+    text-rendering: optimizeLegibility;}
+	  
+.works{
+height:250px;
+	}  
+	.section-header{
+		text-align:center;
+		font-size:24px}
+	 .icon{
+		 margin-top:30px;
+		 margin-left:200px;
+		 margin-bottom:30px;
+		 float:left;}
+.price{height:250px;
+background-color:#69e5eb;
+	}
+	.keep{    cursor: auto;
+    font-family: "omnes-pro",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+	color:#FFF;
+	font-size:30px;	}
+	#p{
+		font-size:18px;}
+		
+		#price1{   cursor: auto;
+    font-family: "omnes-pro",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+	color:#FFF;
+	font-size:30px;
+	float:left;
+	padding-left:150px;		}
+			#price2{   cursor: auto;
+    font-family: "omnes-pro",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+	color:#FFF;
+	font-size:30px;
+	padding-right:150px;
+	float:right;
+			}
+footer{
+	height:200px;
+	background-color:#FFF;}
+	.img1{
+	height:80px;
+	width:80px;
+	margin-top:20px;
+	margin-right:20px;}
+	#foot{
+		font-family:"Berlin Sans FB";
+		
+		font-size:24px;
+		text-decoration:none;}
+		#foot a{
+	text-decoration:none;
+		font-size:18px;
+	
+	border-right:1px solid #528884;
+	color:#528884;
+	padding:0 15px;}
+	#foot a.nobar{
+	border:0;}
+	
+	
+	
+	.icon{
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}.icon:hover {
+  -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.img1 {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.img1:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.button1 {
+    background-color:#0D8481;
+    border: 1px;;
+    color:#EBF9FA;
+    padding: 35px 52px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.land{
+  
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+.land:hover {
+  width: 700px;
+  height: 700px;
+}
+#copyright{
+	float:right;
+	color:#528884;}

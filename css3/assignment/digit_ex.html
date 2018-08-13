@@ -1,0 +1,45 @@
+<html>
+<body>
+	
+	Enter the No :<input type="text" id="text1"></input></br>
+	<input type="button" value="Click" onclick=Magic()></input><br>
+	<div id="d1"></div>
+	<script>
+	 
+	 sum=0;
+	 sum1=0;
+	 
+	function Magic()
+	{
+		text1=Number(document.getElementById("text1").value);
+		d1=document.getElementById("d1");
+	
+		alert(text1);
+		while(text1>0)
+		{
+			 x=text1%10;
+			sum=sum+x;
+			text1=Math.floor(text1/10);
+		}
+		if(sum>9)
+		{
+			while(sum>0)
+			{
+				y=sum%10;
+				sum1=sum1+y;
+				sum=Math.floor(sum/10);
+			}
+		}
+		if(sum1==1 || sum==1)
+		{
+			d1.innerHTML+="Your No is a Magic No";
+		}
+		else
+		{
+			d1.innerHTML+="Your No is not a Magic no";
+		}
+	}
+	</script>
+
+	</body>
+</html>
